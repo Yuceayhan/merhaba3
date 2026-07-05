@@ -1251,11 +1251,11 @@
     {
       tr: {
         q: "Makineleriniz yerli üretim midir?",
-        a: "Evet. Tüm UZMAN PRESS buhar kazanları, paskaraları ve pres makineleri %100 yerli üretim olup, yüksek kaliteli yedek parça ve servis garantisine sahiptir.",
+        a: "Evet. Tüm UZMAN ÜTÜ buhar kazanları, paskaraları ve pres makineleri %100 yerli üretim olup, yüksek kaliteli yedek parça ve servis garantisine sahiptir.",
       },
       en: {
         q: "Are your machines locally manufactured?",
-        a: "Yes. All UZMAN PRESS steam boilers, vacuum tables, and press machines are 100% locally manufactured, backed by high-quality spare parts and service guarantees.",
+        a: "Yes. All UZMAN IRON steam boilers, vacuum tables, and press machines are 100% locally manufactured, backed by high-quality spare parts and service guarantees.",
       }
     },
     {
@@ -1271,11 +1271,11 @@
     {
       tr: {
         q: "Teknik servis ve garanti desteğiniz var mı?",
-        a: "Tüm UZMAN PRESS makineleri üretim hatalarına karşı garantilidir. Kurulum, yedek parça temini ve acil teknik destek durumlarında hızlı servis ekibimizle hizmet vermekteyiz.",
+        a: "Tüm UZMAN ÜTÜ makineleri üretim hatalarına karşı garantilidir. Kurulum, yedek parça temini ve acil teknik destek durumlarında hızlı servis ekibimizle hizmet vermekteyiz.",
       },
       en: {
         q: "Do you provide technical service and warranty support?",
-        a: "All UZMAN PRESS machinery is fully guaranteed against manufacturing defects. We offer fast service support for installation, spare parts, and urgent technical needs.",
+        a: "All UZMAN ÜTÜ machinery is fully guaranteed against manufacturing defects. We offer fast service support for installation, spare parts, and urgent technical needs.",
       }
     },
     {
