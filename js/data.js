@@ -48,11 +48,13 @@
       "cat-endustriyel": "Endüstriyel Ürünler",
       "cat-kazanli-utu": "Kazanlı Tip Buharlı Ütüler",
       "cat-kendinden-kazanli": "Kendinden Kazanlı Paskaralar",
-      "cat-leke-makinalari": "Leke Makinaları",
+      "cat-leke-makinalari": "Leke Çıkarma Makinaları",
       "cat-otomatik-kazanlar": "Otomatik Buhar Kazanları",
-      "cat-rezistanli": "Rezistanlı Paskaralar",
+      "cat-rezistanli": "Rezistanslı Paskaralar",
       "cat-tasarruflu": "Tasarruflu Paskaralar",
       "cat-utu-masalari": "Ütü Masaları",
+      "cat-utu-ve-masa": "Ütü ve Masa",
+      "cat-yedek-parca": "Yedek Parçalar",
 
       "products-badge": "Katalog",
       "products-title": "Öne Çıkan Ürünlerimiz",
@@ -88,15 +90,15 @@
       "view-all": "Tümünü Gör",
       
       // Slayt Çevirileri
-      "hero-badge-1": "UZMAN • Yüksek Performans",
-      "hero-title-1": "Sanayi Tipi Buharlı Ütü ve Pres Sistemleri",
-      "hero-desc-1": "Tekstil atölyeleri, kuru temizleme işletmeleri ve konfeksiyon fabrikaları için yüksek kaliteli, dayanıklı ve üstün performanslı buharlı ütü çözümleri.",
-      "hero-badge-2": "UZMAN • Maksimum Güç",
-      "hero-title-2": "Tam Otomatik Endüstriyel Buhar Kazanları",
-      "hero-desc-2": "Yüksek basınçlı kuru buhar üretimi ve kesintisiz su beslemesi ile konfeksiyon hatlarında kesintisiz çalışma ve yüksek verimlilik.",
-      "hero-badge-3": "UZMAN • Hatasız Formlar",
-      "hero-title-3": "Profesyonel Dikiş Açma ve Ütü Masaları",
-      "hero-desc-3": "Yüksek vakum performansı ve ısıtmalı üst tablaları sayesinde nem birikmesini önleyen, iz yapmayan mükemmel ütüleme çözümleri.",
+      "hero-badge-1": "UZMAN • Kendinden Kazanlı Paskara",
+      "hero-title-1": "Kendinden Kazanlı Dar Paskara (Kollu)",
+      "hero-desc-1": "Dahili buhar kazanı, güçlü vakum motoru ve ısıtmalı dar kol aparatı sayesinde pantolon, ceket ve dar kesim kıyafetlerde pürüzsüz sonuçlar sağlayan profesyonel ütü masası.",
+      "hero-badge-2": "UZMAN • Geniş Tabla Avantajı",
+      "hero-title-2": "Kendinden Kazanlı Geniş Paskara",
+      "hero-desc-2": "Geniş çalışma tablası, entegre buhar jeneratörü ve güçlü vakum emiş motoru ile kaban, ceket ve geniş ebatlı tekstil ürünlerinde maksimum verimlilik ve hız.",
+      "hero-badge-3": "UZMAN • Katlanabilir Tasarım",
+      "hero-title-3": "Katlanabilir Fanlı ve Kazanlı Ütü Masası",
+      "hero-desc-3": "Butik atölyeler ve kuru temizlemeciler için katlanabilir ayak mekanizması, dahili buhar kazanı ve buhar emme/üfleme (hava yastığı) özellikli profesyonel sistem.",
     },
     en: {
       "ticker-announcement": "We are at your service weekdays between 09:00 - 18:00.",
@@ -149,6 +151,8 @@
       "cat-rezistanli": "Resistor Tables",
       "cat-tasarruflu": "Eco-Friendly Tables",
       "cat-utu-masalari": "Ironing Boards",
+      "cat-utu-ve-masa": "Irons & Boards",
+      "cat-yedek-parca": "Spare Parts",
 
       "products-badge": "Catalog",
       "products-title": "Our Featured Products",
@@ -184,305 +188,891 @@
       "view-all": "View All",
       
       // Slide Translations
-      "hero-badge-1": "UZMAN • High Performance",
-      "hero-title-1": "Industrial Steam Iron & Press Systems",
-      "hero-desc-1": "High-quality, durable, and high-performance steam iron solutions for textile workshops, dry cleaners, and clothing factories.",
-      "hero-badge-2": "UZMAN • Maximum Power",
-      "hero-title-2": "Fully Automatic Industrial Steam Boilers",
-      "hero-desc-2": "Continuous operation and efficiency in garment lines with high-pressure dry steam production and automatic water feed systems.",
-      "hero-badge-3": "UZMAN • Flawless Forms",
-      "hero-title-3": "Professional Seam Opening & Ironing Tables",
-      "hero-desc-3": "Perfect, trace-free ironing solutions that prevent moisture buildup thanks to high vacuum suction and heated top boards.",
+      "hero-badge-1": "UZMAN • Self-Boiler Table",
+      "hero-title-1": "Self-Boiler Narrow Ironing Table (with Arm)",
+      "hero-desc-1": "Professional ironing table with built-in boiler, powerful vacuum motor, and heated narrow sleeve arm, delivering perfect results on pants, jackets, and tight-cut garments.",
+      "hero-badge-2": "UZMAN • Wide Board Advantage",
+      "hero-title-2": "Self-Boiler Wide Ironing Table",
+      "hero-desc-2": "Maximum efficiency and speed for coats, jackets, and large textiles thanks to its wide working table, integrated steam generator, and powerful vacuum suction.",
+      "hero-badge-3": "UZMAN • Foldable Design",
+      "hero-title-3": "Foldable Ironing Board with Fan and Boiler",
+      "hero-desc-3": "A professional folding board system with scissor-legs mechanism, built-in boiler, and suction/blowing (air cushion) features for boutique shops and dry cleaners.",
     },
   };
 
   // Ürünler Veritabanı (28 adet)
   const productsData = [
     {
-      id: "dar-paskara",
-      category: "table",
-      katalogCategory: "kendinden-kazanli",
-      img: "assets/images/dar_paskara.png",
+      id: "utu-switch",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/utu_switch.png",
       tr: {
-        title: "Kendinden Kazanlı Dar Paskara",
-        desc: "Isıtmalı kol aparatı ve yüksek vakum gücü ile ceket, gömlek ve pantolon ütülemede profesyonel sonuçlar sağlar.",
+        title: "Ütü Switch",
+        desc: "Sanayi tipi el ütülerinde buhar püskürtme valfini tetikleyen, kırmızı basma butonlu, ısıya ve yoğun kullanıma dayanıklı sap içi mikro switch.",
         bullets: [
-          "Isıtmalı kol aparatı sayesinde gömlek, ceket, elbise gibi uzun kollu ürünlerin ütülenmesini sağlar.",
-          "Yüksek vakum özelliği sayesinde üst tablanın su yapmasını önler."
+          "Ütü sapı içine mükemmel oturan standart mikro switch ebatları.",
+          "Yoğun seri kullanımlarda kararlı çalışma ve anında tetikleme tepkisi.",
+          "Isıya dayanıklı dış bakalit koruyucu gövde yapısı."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
-          { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
-          { key: "Kazan Isıtıcı Gücü", value: "3.0 kW" },
-          { key: "Buhar Girişi", value: "G 1/2\"" }
+          { key: "Akım Değeri", value: "16(5)A / 250V AC" },
+          { key: "Maks. Sıcaklık", value: "T85 (85°C)" },
+          { key: "Buton Rengi", value: "Kırmızı" },
+          { key: "Uygulama", value: "Sanayi Ütü Sap İçi Buhar Butonu" }
         ]
       },
       en: {
-        title: "Self-Boiler Narrow Ironing Table",
-        desc: "Delivers professional ironing output for jackets, shirts and trousers with its heated arm and strong vacuum extractor.",
+        title: "Steam Iron Handle Microswitch",
+        desc: "Heavy-duty microswitch with a red actuator button, heat and wear resistant, designed to trigger steam valves from iron handles.",
         bullets: [
-          "Enables ironing of long-sleeved items such as shirts, jackets, and dresses thanks to its heated sleeve arm.",
-          "High vacuum performance prevents condensation water accumulation on the top surface."
+          "Standard microswitch dimensions fitting perfectly inside steam iron handles.",
+          "Highly responsive tactile action built for high-speed continuous usage.",
+          "Heat-resistant outer bakelite protective housing."
+        ],
+        specs: [
+          { key: "Current Rating", value: "16(5)A / 250V AC" },
+          { key: "Max. Temperature", value: "T85 (85°C)" },
+          { key: "Button Color", value: "Red" },
+          { key: "Application", value: "Steam Iron Handle Actuation Button" }
+        ]
+      }
+    },
+    {
+      id: "vakum-motoru",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/vakum_motoru.jpg",
+      tr: {
+        title: "Vakum Motoru",
+        desc: "Ütü paskaralarında güçlü hava emişi sağlayarak kumaşın kurumasını ve tablaya yapışmasını sağlayan, sessiz ve yüksek verimli radyal vakum motoru fanı.",
+        bullets: [
+          "Yüksek emiş debisi ile üst tabladaki buharı anında tahliye eder.",
+          "Dinamik balans ayarı yapılmış metal çarkı ile sessiz ve titreşimsiz çalışma.",
+          "Isınmaya karşı termik korumalı endüstriyel bobin motor yapısı."
+        ],
+        specs: [
+          { key: "Güç Değeri", value: "0.37 kW / 0.55 kW" },
+          { key: "Çalışma Voltajı", value: "220V / 380V" },
+          { key: "Motor Devri", value: "2800 d/dak" },
+          { key: "Gövde Malzemesi", value: "Statik Boyalı Çelik Sac" }
+        ]
+      },
+      en: {
+        title: "Ironing Table Vacuum Motor",
+        desc: "Quiet and high-efficiency radial vacuum motor fan, providing strong air suction to dry garments and hold them flat on ironing tables.",
+        bullets: [
+          "High flow rate suction extracts steam from the table surface instantly.",
+          "Dynamically balanced steel impeller delivers silent and vibration-free runs.",
+          "Industrial motor design with built-in thermal overload protection."
+        ],
+        specs: [
+          { key: "Power Output", value: "0.37 kW / 0.55 kW" },
+          { key: "Operating Voltage", value: "220V / 380V" },
+          { key: "Fan Speed", value: "2800 RPM" },
+          { key: "Housing Material", value: "Powder Coated Sheet Metal" }
+        ]
+      }
+    },
+    {
+      id: "basinc-anahtari",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/basinc_anahtari.png",
+      tr: {
+        title: "Basınç Anahtarı",
+        desc: "Buhar kazanlarında ayarlanan buhar basıncına ulaşıldığında rezistans akımını keserek basıncı sabit tutan pirinç gövdeli basınç kontrol sensörü.",
+        bullets: [
+          "Buhar kazanlarında basınç sınır kontrolü için son derece hassas ölçüm.",
+          "Paslanmaz çelik membranlı ve pirinç dişli dayanıklı gövde.",
+          "Elektriksel arkları önleyen gümüş alaşımlı kontaklar."
+        ],
+        specs: [
+          { key: "Bağlantı Dişi", value: "G 1/4\" Erkek Dişli" },
+          { key: "Çalışma Basıncı", value: "1 - 5 Bar Ayarlanabilir" },
+          { key: "Gövde Malzemesi", value: "Pirinç ve Paslanmaz Çelik" },
+          { key: "Akım Değeri", value: "16A / 250V" }
+        ]
+      },
+      en: {
+        title: "Steam Boiler Pressure Switch",
+        desc: "Brass-body pressure sensor that regulates steam pressure by cutting off heating elements when reaching preset pressure levels.",
+        bullets: [
+          "Highly precise measurement for pressure limit control in steam boilers.",
+          "Durable construction with stainless steel membrane and brass connection thread.",
+          "Silver alloy contacts prevent electrical arcing."
+        ],
+        specs: [
+          { key: "Connection Thread", value: "G 1/4\" Male Thread" },
+          { key: "Pressure Range", value: "1 - 5 Bar Adjustable" },
+          { key: "Body Material", value: "Brass & Stainless Steel" },
+          { key: "Current Rating", value: "16A / 250V" }
+        ]
+      }
+    },
+    {
+      id: "basinc-salteri",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/basinc_salteri.jpg",
+      tr: {
+        title: "Basınç Şalteri",
+        desc: "Sanayi tipi merkezi buhar sistemleri ve otomatik kazanlarda basıncı hassas olarak izleyip kontrol eden, göstergeli, yüksek güvenlik limitli basınç şalteri.",
+        bullets: [
+          "Ön paneldeki skala ve ayar vidaları sayesinde hassas basınç limit ayarı.",
+          "Yüksek basınç durumlarında kazan rezistansını kapatarak patlamaları önler.",
+          "Darbelere ve neme karşı korumalı plastik kapaklı çelik gövde."
+        ],
+        specs: [
+          { key: "Basınç Ayar Aralığı", value: "2 - 14 Bar (veya 1 - 5 Bar)" },
+          { key: "Bağlantı Ölçüsü", value: "1/4\" NPT veya G 1/4\"" },
+          { key: "Kontak Tipi", value: "Tek Kutuplu Çift Yönlü (SPDT)" },
+          { key: "Model Uyum", value: "Otomatik Kazanlar ve Merkezi Sistemler" }
+        ]
+      },
+      en: {
+        title: "Box-Type Steam Pressure Controller",
+        desc: "Heavy-duty box-type pressure controller with indicator dial, designed to accurately monitor and limit steam pressure in central steam boilers.",
+        bullets: [
+          "Precise limit adjustment using the front-panel dial and screw setups.",
+          "Protects boilers by shutting down heater grids during overpressure events.",
+          "Steel enclosure with splash-proof plastic cover shield."
+        ],
+        specs: [
+          { key: "Pressure Range", value: "2 - 14 Bar (or 1 - 5 Bar)" },
+          { key: "Connection Size", value: "1/4\" NPT or G 1/4\"" },
+          { key: "Contact System", value: "Single Pole Double Throw (SPDT)" },
+          { key: "Compatibility", value: "Automatic Boilers & Central Systems" }
+        ]
+      }
+    },
+    {
+      id: "paskara-switch",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/paskara_switch.png",
+      tr: {
+        title: "Paskara Switch",
+        desc: "Ütü paskaralarında vakum emiş motorunu ayak pedalıyla kontrol etmeyi sağlayan, yüksek açma-kapama ömrüne sahip mekanik limit switch.",
+        bullets: [
+          "Pedal mekanizmaları için özel yaylı pim tasarımı.",
+          "Hassas algılama ve anında motor devreye alma/çıkarma tepki süresi.",
+          "Isıya ve toza dayanıklı dayanıklı plastik koruma gövdesi."
+        ],
+        specs: [
+          { key: "Akım Değeri", value: "15A / 250V AC" },
+          { key: "Kontak Tipi", value: "1 NO + 1 NC" },
+          { key: "Mekanik Ömür", value: "Min. 1.000.000 Çevrim" },
+          { key: "Kullanım Yeri", value: "Paskara Ayak Pedalları" }
+        ]
+      },
+      en: {
+        title: "Ironing Table Foot Pedal Switch",
+        desc: "Mechanical limit switch with high operational life, designed to control vacuum suction motors via foot pedals in ironing tables.",
+        bullets: [
+          "Special spring-loaded pin layout optimized for foot pedals.",
+          "Highly responsive tactile feel and instantaneous switching.",
+          "Heat and dust resistant robust plastic enclosure."
+        ],
+        specs: [
+          { key: "Current Rating", value: "15A / 250V AC" },
+          { key: "Contact Type", value: "1 NO + 1 NC" },
+          { key: "Mechanical Life", value: "Min. 1,000,000 Cycles" },
+          { key: "Application", value: "Ironing Table Foot Pedals" }
+        ]
+      }
+    },
+    {
+      id: "paskara-termostati",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/paskara_termostati.png",
+      tr: {
+        title: "Paskara Termostatı",
+        desc: "Paskara üst tablalarının sıcaklığını istenilen derecede sabit tutmayı sağlayan, hassas kılcal borulu endüstriyel termostat.",
+        bullets: [
+          "30°C - 120°C arası hassas sıcaklık ayarı kontrolü sağlar.",
+          "Kılcal borusu sayesinde tabla sıcaklığını doğrudan ve doğru şekilde ölçer.",
+          "Dayanıklı paslanmaz kontak yapısı ile uzun ömürlü kullanım."
+        ],
+        specs: [
+          { key: "Sıcaklık Aralığı", value: "30°C - 120°C" },
+          { key: "Kılcal Boyu", value: "1000 mm" },
+          { key: "Akım Kapasitesi", value: "16A / 250V" },
+          { key: "Sensör Malzemesi", value: "Bakır Kılcal Boru" }
+        ]
+      },
+      en: {
+        title: "Ironing Table Capillary Thermostat",
+        desc: "Industrial thermostat with a precise capillary tube, designed to maintain ironing table temperatures at the desired level.",
+        bullets: [
+          "Provides precise temperature control setting between 30°C and 120°C.",
+          "Accurately measures table temperature via copper capillary sensor.",
+          "Durable stainless contact layout guarantees long working life."
+        ],
+        specs: [
+          { key: "Temperature Range", value: "30°C - 120°C" },
+          { key: "Capillary Length", value: "1000 mm" },
+          { key: "Current Capacity", value: "16A / 250V" },
+          { key: "Sensor Material", value: "Copper Capillary Tube" }
+        ]
+      }
+    },
+    {
+      id: "sivi-seviye-rolesi",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/sivi_seviye_rolesi.png",
+      tr: {
+        title: "Sıvı Seviye Kontrol Rölesi",
+        desc: "Buhar kazanlarında su seviyesini elektrotlar yardımıyla kontrol ederek rezistansların susuz çalışmasını önleyen elektronik sıvı seviye rölesi.",
+        bullets: [
+          "Kanal içindeki su seviyesini elektrotlar üzerinden hassas takip eder.",
+          "Düşük su seviyesinde rezistans elektriğini keserek kazanı korur.",
+          "Otomatik pompa kontrolü ile kazana otomatik su takviyesi sağlar."
+        ],
+        specs: [
+          { key: "Besleme Voltajı", value: "220V AC" },
+          { key: "Kontrol Tipi", value: "Elektrotlu Seviye Kontrolü" },
+          { key: "Çıkış Rölesi", value: "8A / 250V (1 NO/NC)" },
+          { key: "Montaj", value: "DIN Ray Uyumlu" }
+        ]
+      },
+      en: {
+        title: "Liquid Level Control Relay",
+        desc: "Electronic liquid level controller that monitors boiler water levels via electrodes to protect heating elements from dry running.",
+        bullets: [
+          "Precisely tracks water levels inside the boiler tank via sensing probes.",
+          "Safeguards heating elements by cutting power off during low-water states.",
+          "Ensures automatic pump triggering for water replenishments."
+        ],
+        specs: [
+          { key: "Supply Voltage", value: "220V AC" },
+          { key: "Control Method", value: "Electrode Probe Sensing" },
+          { key: "Output Contact", value: "8A / 250V (1 NO/NC)" },
+          { key: "Mounting", value: "DIN Rail Mounting" }
+        ]
+      }
+    },
+    {
+      id: "utu-hortumu",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/utu_hortumu.jpg",
+      tr: {
+        title: "Ütü Hortumu 6*11mm",
+        desc: "Profesyonel el ütüleri ve buhar kazanları arasında yüksek basınçlı buhar iletimi sağlayan, örgü kaplamalı, ısıya dayanıklı silikon ütü hortumu.",
+        bullets: [
+          "6x11 mm standart iç ve dış çap ölçülerine sahiptir.",
+          "Dış örgü kaplaması sürtünmeye ve yırtılmaya karşı ekstra dayanıklılık sunar.",
+          "Yüksek buhar sıcaklıklarına ve yüksek basınca dayanıklı silikon iç tüp."
+        ],
+        specs: [
+          { key: "İç Çap", value: "6 mm" },
+          { key: "Dış Çap", value: "11 mm" },
+          { key: "Malzeme", value: "Isıya Dayanıklı Silikon ve Örgü Kaplama" },
+          { key: "Basınç Dayanımı", value: "Max. 10 Bar" }
+        ]
+      },
+      en: {
+        title: "Steam Iron Hose 6*11mm",
+        desc: "Braided high-pressure heat-resistant silicone steam hose for connecting professional steam hand irons to automatic steam boilers.",
+        bullets: [
+          "Standard 6x11 mm inner and outer diameter sizing.",
+          "Outer textile braiding provides extra resistance against abrasion and tears.",
+          "High temperature and high pressure resistant silicone inner core."
+        ],
+        specs: [
+          { key: "Inner Diameter", value: "6 mm" },
+          { key: "Outer Diameter", value: "11 mm" },
+          { key: "Material", value: "Heat-Resistant Silicone & Braided Outer Cover" },
+          { key: "Pressure Rating", value: "Max. 10 Bar" }
+        ]
+      }
+    },
+    {
+      id: "utu-kablosu",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/utu_kablosu.png",
+      tr: {
+        title: "Ütü Kablosu",
+        desc: "Sanayi ütülerinde hareket kolaylığı sağlayan, bükülmelere ve aşınmaya karşı kırmızı-siyah kumaş örgü kaplı, ısıya dayanıklı elektrik kablosu.",
+        bullets: [
+          "Kumaş örgü kaplaması kablonun dolanmasını ve düğümlenmesini önler.",
+          "Ütü tabanının yüksek sıcaklığına dayanıklı silikon iç izole katmanı.",
+          "Topraklı fişi ile güvenli elektrik bağlantısı."
+        ],
+        specs: [
+          { key: "Kablo Kesiti", value: "3 x 1.0 mm² veya 3 x 1.5 mm²" },
+          { key: "Dış Kaplama", value: "Kırmızı-Siyah Pamuk/Polyester Örgü" },
+          { key: "Özellik", value: "Bükülmeye Dayanıklı, Isı Yalıtımlı" }
+        ]
+      },
+      en: {
+        title: "Fabric Braided Iron Cable",
+        desc: "Heat-resistant electric cable covered with red-black fabric braiding, protecting against kinks and wear while offering easy movement for industrial steam irons.",
+        bullets: [
+          "Fabric braided cover prevents the power cord from tangling or kinking.",
+          "Silicone inner insulation withstands high contact temperatures of iron plates.",
+          "Grounded safety plug for secure electrical connection."
+        ],
+        specs: [
+          { key: "Cable Spec", value: "3 x 1.0 mm² or 3 x 1.5 mm²" },
+          { key: "Outer Braid", value: "Red-Black Woven Cotton/Polyester" },
+          { key: "Feature", value: "Kink-Resistant, High Heat Insulation" }
+        ]
+      }
+    },
+    {
+      id: "paskara-bezi",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/paskara_bezi.jpg",
+      tr: {
+        title: "Dar & Geniş Paskara Bezi",
+        desc: "Sanayi tipi dar ve geniş paskaralar için yüksek ısıya dayanıklı, buhar geçirgenliği yüksek, süngerli ve polyester dokulu profesyonel ütü masası kılıfı.",
+        bullets: [
+          "Yüksek sıcaklıklara dayanıklı özel dokuma polyester kumaş.",
+          "Yüksek buhar geçirgenliği sayesinde nem birikmesini önler.",
+          "Dar ve geniş masa modelleri için uygun ebat seçenekleri mevcuttur."
+        ],
+        specs: [
+          { key: "Kumaş Tipi", value: "Isıya Dayanıklı Polyester Dokuma" },
+          { key: "Alt Dolgu", value: "Isıya Dayanıklı Sünger" },
+          { key: "Renk", value: "Mavi" },
+          { key: "Uygulama", value: "Dar ve Geniş Paskaralar" }
+        ]
+      },
+      en: {
+        title: "Narrow & Wide Ironing Table Cover",
+        desc: "High heat-resistant, highly steam-permeable professional ironing table cover with foam backing and polyester weave, designed for industrial narrow and wide boards.",
+        bullets: [
+          "Special heat-resistant woven polyester fabric for long service life.",
+          "Excellent steam permeability prevents moisture condensation.",
+          "Available in custom dimensions fitting both narrow and wide tables."
+        ],
+        specs: [
+          { key: "Fabric Type", value: "Heat-Resistant Polyester Weave" },
+          { key: "Backing", value: "High-Temperature Resistant Sponge" },
+          { key: "Color", value: "Blue" },
+          { key: "Compatibility", value: "Narrow & Wide Ironing Boards" }
+        ]
+      }
+    },
+    {
+      id: "goz-lamba",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/goz_lamba.png",
+      tr: {
+        title: "Sinyal Lambası (Göz Lamba)",
+        desc: "Buhar kazanları ve paskaraların elektrik panolarında akım, ısıtma ve su seviyesi durumlarını göstermek için kullanılan 220V dayanıklı uyarı lambası.",
+        bullets: [
+          "Yüksek görünürlüklü parlak neon/LED lamba yapısı.",
+          "Isıya ve darbelere dayanıklı polikarbonat mercek.",
+          "Kolay kablo bağlantısı sağlayan terminal yapısı."
+        ],
+        specs: [
+          { key: "Çalışma Voltajı", value: "220V AC" },
+          { key: "Renk", value: "Kırmızı / Turuncu" },
+          { key: "Montaj Çapı", value: "10 mm" },
+          { key: "Kullanım Alanı", value: "Kazanlar, Paskaralar ve Panolar" }
+        ]
+      },
+      en: {
+        title: "Indicator Lamp (Signal Light)",
+        desc: "Durable 220V indicator lamp used in steam boiler and ironing board electrical panels to show power, heating, and water level status.",
+        bullets: [
+          "High-visibility bright neon/LED light construction.",
+          "Heat and impact resistant polycarbonate lens shroud.",
+          "Quick connect terminals for easy wiring setup."
+        ],
+        specs: [
+          { key: "Operating Voltage", value: "220V AC" },
+          { key: "Color", value: "Red / Orange" },
+          { key: "Mounting Diameter", value: "10 mm" },
+          { key: "Application", value: "Boilers, Ironing Tables, Control Panels" }
+        ]
+      }
+    },
+    {
+      id: "kazan-rezistansi",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/kazan_rezistansi.png",
+      tr: {
+        title: "Buhar Kazanı Rezistansi",
+        desc: "Sanayi tipi otomatik buhar kazanları için paslanmaz çelikten üretilmiş, pirinç flanşlı, yüksek ısıl verimliliğe ve uzun ömre sahip elektrikli ısıtıcı.",
+        bullets: [
+          "Yüksek kaliteli paslanmaz çelik tüp koruma malzemesi.",
+          "Kireçlenmeye ve korozyona dayanıklı özel alaşım kaplama.",
+          "Standart vidalı pirinç flanş ile kolay montaj imkanı."
+        ],
+        specs: [
+          { key: "Güç Seçenekleri", value: "4.5 kW / 7.5 kW / 10 kW" },
+          { key: "Malzeme", value: "Paslanmaz Çelik Tüp, Pirinç Flanş" },
+          { key: "Çalışma Voltajı", value: "220V / 380V" },
+          { key: "Bağlantı Tipi", value: "Dişli Vidalı" }
+        ]
+      },
+      en: {
+        title: "Steam Boiler Heating Element",
+        desc: "Stainless steel electric heating element with brass flange, offering high thermal efficiency and long operational lifetime for industrial steam boilers.",
+        bullets: [
+          "High-quality stainless steel heating tube sheath.",
+          "Anti-corrosion coating prevents mineral scale build-up.",
+          "Easy installation with standard threaded brass flange."
+        ],
+        specs: [
+          { key: "Power Options", value: "4.5 kW / 7.5 kW / 10 kW" },
+          { key: "Material", value: "Stainless Steel Tube, Brass Flange" },
+          { key: "Voltage", value: "220V / 380V" },
+          { key: "Connection Thread", value: "Screwed Threaded Type" }
+        ]
+      }
+    },
+    {
+      id: "kontaktor",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/kontaktor.png",
+      tr: {
+        title: "Elektrikli Kontaktör",
+        desc: "Buhar kazanları ve paskaraların rezistans ve motor devrelerini güvenle açıp kapatan, yüksek akım korumalı endüstriyel AC kontaktör.",
+        bullets: [
+          "Rezistansların yüksek güç yüklerini güvenli bir şekilde anahtarlar.",
+          "Uzun mekanik ve elektriksel ömre sahip dayanıklı kontak alaşımı.",
+          "Kolay ray montajı ve pano içi düzenli kablolama imkanı."
+        ],
+        specs: [
+          { key: "Bobin Voltajı", value: "220V AC" },
+          { key: "Akım Değeri", value: "9A / 12A / 18A / 25A" },
+          { key: "Kutup Sayısı", value: "3 Kutup (3P)" },
+          { key: "Standart", value: "IEC / EN 60947" }
+        ]
+      },
+      en: {
+        title: "Electrical Contactor",
+        desc: "Industrial AC contactor with high current capacity, designed to safely switch heater and motor circuits in steam boilers and ironing boards.",
+        bullets: [
+          "Safely switches high-power resistive loads of heating elements.",
+          "Premium contact alloy ensures long mechanical and electrical service life.",
+          "Easy DIN rail mounting and organized panel cabling."
+        ],
+        specs: [
+          { key: "Coil Voltage", value: "220V AC" },
+          { key: "Current Rating", value: "9A / 12A / 18A / 25A" },
+          { key: "Number of Poles", value: "3 Poles (3P)" },
+          { key: "Standard", value: "IEC / EN 60947" }
+        ]
+      }
+    },
+    {
+      id: "paskara-rezistansi",
+      category: "spare",
+      katalogCategory: "yedek-parca",
+      img: "assets/images/paskara_rezistansi.png",
+      tr: {
+        title: "Paskara Rezistansı",
+        desc: "Ütü paskaralarının üst tablasını ısıtarak kumaşta nem birikmesini önleyen, özel U-formunda bükülmüş, homojen ısı dağılımlı endüstriyel tabla rezistansı.",
+        bullets: [
+          "Masa yüzeyinde homojen ısı dağılımı sağlayarak nem lekelerini engeller.",
+          "Özel bükümlü paslanmaz yapısı ile paskaraların altına tam uyum sağlar.",
+          "Hızlı ısınma süresi ile zamandan ve enerjiden tasarruf sağlar."
+        ],
+        specs: [
+          { key: "Güç Değeri", value: "1000W / 1500W" },
+          { key: "Çalışma Voltajı", value: "220V AC" },
+          { key: "Malzeme", value: "Paslanmaz Çelik Tüp" },
+          { key: "Kullanım Alanı", value: "Paskara Üst Tabla Isıtması" }
+        ]
+      },
+      en: {
+        title: "Ironing Table Heating Element",
+        desc: "U-shaped industrial board heating element providing uniform heat distribution to keep table surfaces dry and prevent moisture accumulation in fabrics.",
+        bullets: [
+          "Prevents moisture stains by ensuring homogeneous heat distribution on the surface.",
+          "Specially shaped stainless steel structure perfectly fits under the board.",
+          "Fast heat-up time saves both work cycle time and energy consumption."
+        ],
+        specs: [
+          { key: "Power Rating", value: "1000W / 1500W" },
+          { key: "Operating Voltage", value: "220V AC" },
+          { key: "Material", value: "Stainless Steel Tube" },
+          { key: "Application", value: "Ironing Table Top Heating" }
+        ]
+      }
+    },
+    {
+      id: "dikis-acma-paskarasi",
+      category: "table",
+      katalogCategory: "endustriyel",
+      img: "assets/images/dikis_acma_paskarasi.png",
+      tr: {
+        title: "Dikiş Açma Paskarası",
+        desc: "Pantolon, ceket ve palto dikişlerinin düzgün ve pürüzsüz açılması için özel olarak tasarlanmış, rezistans ısıtmalı dar üst tablaya sahip dikiş açma paskarası.",
+        bullets: [
+          "Dikiş açma işlemleri için özel dar ve ergonomik tabla tasarımı.",
+          "Rezistans ısıtmalı tabla yüzeyin kuru kalmasını ve nemlenmesini önler.",
+          "Endüstriyel atölyelerde seri üretim dikiş kırma adımlarına uygundur."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "230V / 380V" },
+          { key: "Vakum Motoru Gücü", value: "0.37 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
+          { key: "Masa Ebatları", value: "140 x 40 cm" }
+        ]
+      },
+      en: {
+        title: "Seam Opening Ironing Table",
+        desc: "Seam opening ironing table featuring a resistance-heated narrow top board, specially designed to open flat and smooth seams on trousers, jackets, and coats.",
+        bullets: [
+          "Special narrow and ergonomic board layout designed specifically for seam flattening.",
+          "Resistance-heated board keeps the surface completely dry during operation.",
+          "Perfectly suited for serial seam creasing steps in industrial garment workshops."
+        ],
+        specs: [
+          { key: "Power Supply", value: "230V / 380V" },
+          { key: "Vacuum Motor Power", value: "0.37 kW" },
+          { key: "Table Heating Power", value: "1.5 kW" },
+          { key: "Table Dimensions", value: "140 x 40 cm" }
+        ]
+      }
+    },
+    {
+      id: "silter-210-el-utusu",
+      category: "boiler-iron",
+      katalogCategory: "utu-ve-masa",
+      img: "assets/images/silter_210_el_utusu.png",
+      tr: {
+        title: "Silter-210 Buharlı Ağır El Ütüsü",
+        desc: "Profesyonel kuru temizleme ve konfeksiyon atölyeleri için tasarlanmış, mantar saplı, kalın tabanlı ve güçlü buhar püskürtmeli ağır hizmet tipi sanayi ütüsü.",
+        bullets: [
+          "Ergonomik mantar sap tasarımı ile el yormayan konforlu çalışma sağlar.",
+          "Kalın alüminyum tabanı ile mükemmel ısı koruması ve düzgün baskı sunar.",
+          "Endüstriyel buhar kazanlarıyla uyumlu bağlantı tertibatı."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "220V / 50Hz" },
+          { key: "Rezistans Gücü", value: "800W" },
+          { key: "Taban Malzemesi", value: "Kalın Alüminyum Taban" },
+          { key: "Sap Yapısı", value: "Isı Yalıtımlı Mantar Sap" },
+          { key: "Ağırlık", value: "Yaklaşık 2.1 kg" }
+        ]
+      },
+      en: {
+        title: "Silter-210 Heavy Duty Steam Iron",
+        desc: "Heavy-duty industrial steam iron designed for professional dry cleaners and garment workshops, equipped with a cork handle, thick soleplate, and strong steam spray.",
+        bullets: [
+          "Ergonomic cork handle design provides comfortable, fatigue-free operation.",
+          "Thick aluminum soleplate offers excellent heat retention and flat pressing.",
+          "Fully compatible connection assembly for industrial steam boilers."
+        ],
+        specs: [
+          { key: "Power Supply", value: "220V / 50Hz" },
+          { key: "Heating Power", value: "800W" },
+          { key: "Soleplate Material", value: "Thick Aluminum Soleplate" },
+          { key: "Handle Structure", value: "Heat-Insulated Cork Handle" },
+          { key: "Weight", value: "Approx. 2.1 kg" }
+        ]
+      }
+    },
+    {
+      id: "silter-275-el-utusu",
+      category: "boiler-iron",
+      katalogCategory: "utu-ve-masa",
+      img: "assets/images/silter_275_el_utusu.png",
+      tr: {
+        title: "Silter-275 Buharlı Hafif Ütü",
+        desc: "Hassas kumaşlar için kolay hareket kabiliyeti sağlayan, mantar saplı, hafif ve ergonomik tasarıma sahip profesyonel buharlı el ütüsü.",
+        bullets: [
+          "Hafif yapısı sayesinde uzun süreli çalışmalarda kol yorgunluğunu önler.",
+          "Hassas termostat kontrolü ile ipek, saten gibi kumaşlarda güvenli ütüleme.",
+          "Mantar sap ısı yalıtımı sağlayarak konforu artırır."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "220V / 50Hz" },
+          { key: "Rezistans Gücü", value: "800W" },
+          { key: "Taban Malzemesi", value: "Alüminyum Taban" },
+          { key: "Ağırlık", value: "Yaklaşık 1.6 kg" }
+        ]
+      },
+      en: {
+        title: "Silter-275 Light Steam Iron",
+        desc: "Professional steam hand iron featuring a cork handle, lightweight and ergonomic design, ensuring easy movement when pressing delicate fabrics.",
+        bullets: [
+          "Lightweight structure prevents arm fatigue during long-duration shifts.",
+          "Precise thermostat control for safe ironing on fabrics like silk and satin.",
+          "Cork handle provides high heat insulation, enhancing user comfort."
+        ],
+        specs: [
+          { key: "Power Supply", value: "220V / 50Hz" },
+          { key: "Heating Power", value: "800W" },
+          { key: "Soleplate Material", value: "Aluminum Soleplate" },
+          { key: "Weight", value: "Approx. 1.6 kg" }
+        ]
+      }
+    },
+    {
+      id: "katlanabilir-fanli-kazanli-masa",
+      category: "table",
+      katalogCategory: "utu-ve-masa",
+      img: "assets/images/katlanabilir_fanli_kazanli_masa.png",
+      tr: {
+        title: "Katlanabilir Fanlı ve Kazanlı Ütü Masası",
+        desc: "Ev tipi butik atölyeler ve kuru temizleme dükkanları için katlanabilir, dahili buhar kazanlı ve emiş/üfleme fan motorlu profesyonel ütü masası.",
+        bullets: [
+          "Katlanabilir makas ayak sistemi ile kullanılmadığında kolayca saklanır.",
+          "Dahili buhar kazanı ve el ütüsü çıkışı ile bağımsız paket sistem.",
+          "Fanlı emiş/üfleme sistemi (hava yastığı) hassas ütülemede iz bırakmaz."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "220V" },
+          { key: "Kazan Rezistans Gücü", value: "2.0 kW" },
+          { key: "Fan Motoru Gücü", value: "0.1 kW" },
+          { key: "Özellik", value: "Emişli & Üflemeli & Katlanabilir Mekanizma" }
+        ]
+      },
+      en: {
+        title: "Foldable Ironing Board with Fan and Boiler",
+        desc: "Foldable professional ironing board with built-in steam boiler and suction/blowing fan motor, ideal for boutique tailor shops and home dry cleaners.",
+        bullets: [
+          "Foldable scissor legs design makes it easy to store when not in use.",
+          "Self-contained package system with built-in boiler and hand iron outlet.",
+          "Suction and blowing fan (air cushion) prevents traces on delicate garments."
+        ],
+        specs: [
+          { key: "Power Supply", value: "220V" },
+          { key: "Boiler Heating Power", value: "2.0 kW" },
+          { key: "Fan Motor Power", value: "0.1 kW" },
+          { key: "Feature", value: "Blowing & Suction & Foldable System" }
+        ]
+      }
+    },
+    {
+      id: "dikis-acma-paskarasi-kazanli",
+      category: "table",
+      katalogCategory: "endustriyel",
+      img: "assets/images/dikis_acma_paskarasi_kazanli.png",
+      tr: {
+        title: "Kendinden Kazanlı Dikiş Açma Paskarası",
+        desc: "Dahili buhar kazanı, güçlü vakum motoru ve özel dar tabla formuyla harici buhar hattı olmayan konfeksiyonlarda dikiş açma işlemlerini kolaylaştıran paskara.",
+        bullets: [
+          "Dahili buhar kazanı sayesinde merkezi buhar kazanına ihtiyaç duymaz.",
+          "Isıtmalı dar üst tablası nemi engeller ve kumaşın kırışmasını önler.",
+          "Güçlü lokal vakum emişi nemi ve buharı anında tahliye eder."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "230V / 380V" },
+          { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
+          { key: "Kazan Isıtıcı Gücü", value: "3.0 kW" },
+          { key: "Vakum Motoru Gücü", value: "0.37 kW" }
+        ]
+      },
+      en: {
+        title: "Self-Boiler Seam Opening Ironing Table",
+        desc: "Vacuum seam opening board with built-in steam boiler, facilitating seam flattening in workshops without centralized steam lines.",
+        bullets: [
+          "Self-contained boiler design eliminates central steam boiler requirements.",
+          "Heated narrow top board prevents condensation and keeps fabric flat.",
+          "High-suction local vacuum extractor discharges steam and moisture instantly."
+        ],
+        specs: [
+          { key: "Power Supply", value: "220V / 380V" },
+          { key: "Table Heating Power", value: "1.5 kW" },
+          { key: "Boiler Heating Power", value: "3.0 kW" },
+          { key: "Vacuum Motor Power", value: "0.37 kW" }
+        ]
+      }
+    },
+    {
+      id: "leke-paskarasi-kazanli",
+      category: "table",
+      katalogCategory: "leke-makinalari",
+      img: "assets/images/leke_paskarasi_kazanli.jpg",
+      tr: {
+        title: "Kendinden Kazanlı Leke Çıkartma Paskarası",
+        desc: "Dahili buhar kazanı, güçlü vakum motoru ve aydınlatma armatürlü gövdesiyle lekelerin buhar ve kimyasal püskürtme tabancalarıyla anında temizlenmesini sağlayan leke paskarası.",
+        bullets: [
+          "Dahili buhar jeneratörü sayesinde harici bir buhar hattına ihtiyaç duymaz.",
+          "Güçlü lokal vakum emişi lekeli bölgedeki kimyasal buharı hızla uzaklaştırır.",
+          "Leke püskürtme ve buhar tabancası ile lokal leke çıkarmada yüksek verim sağlar."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "230V / 380V" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
+          { key: "Masa Rezistans Gücü", value: "1.5 kW" },
+          { key: "Kazan Rezistans Gücü", value: "4.5 kW" },
+          { key: "Tabanca Sistemi", value: "1x Buhar + 1x Kimyasal Leke Tabancası" }
+        ]
+      },
+      en: {
+        title: "Self-Boiler Stain Removal Table",
+        desc: "Spotting table with built-in boiler, high-suction vacuum, and illumination arm, enabling instant spot cleaning using steam and chemical spray guns.",
+        bullets: [
+          "Equipped with its own steam generator, eliminating external line dependencies.",
+          "Powerful local vacuum extraction quickly draws chemical vapors away.",
+          "Ensures high efficiency in spotting with dedicated steam and spotting guns."
+        ],
+        specs: [
+          { key: "Power Supply", value: "230V / 380V" },
+          { key: "Vacuum Motor Power", value: "0.55 kW" },
+          { key: "Table Heating Power", value: "1.5 kW" },
+          { key: "Boiler Heating Power", value: "4.5 kW" },
+          { key: "Gun Systems", value: "1x Steam Gun + 1x Chemical Spotting Gun" }
+        ]
+      }
+    },
+    {
+      id: "leke-paskarasi",
+      category: "table",
+      katalogCategory: "leke-makinalari",
+      img: "assets/images/leke_paskarasi.png",
+      tr: {
+        title: "Kabinli Leke Çıkartma Paskarası",
+        desc: "Kapalı paslanmaz çelik kabin yapısı, aydınlatma armatürü ve solvent emici aktif karbon filtre sistemleriyle profesyonel leke temizleme istasyonu.",
+        bullets: [
+          "Kapalı kabin tasarımı solvent buharlarını hapsederek sağlıklı çalışma alanı sunar.",
+          "Güçlü vakum tahliyesi lekeli kimyasalları anında absorbe eder.",
+          "Çift leke tabancası ve aydınlatmalı baca armatürü mevcuttur."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
+          { key: "Kimyasal Tabancası", value: "2 Adet Pnömatik Tabanca" },
+          { key: "Aydınlatma Tipi", value: "Dahili LED Armatürlü" },
+          { key: "Masa Ebatları", value: "110 x 80 x 180 cm" }
+        ]
+      },
+      en: {
+        title: "Stain Removal Cabinet Table",
+        desc: "Professional spotting station featuring an enclosed stainless steel cabinet, lighting, and high-performance carbon extraction filtration to capture solvent fumes.",
+        bullets: [
+          "Enclosed cabinet design traps chemical vapors, protecting operators.",
+          "High-suction vacuum motor absorbs spotting chemicals instantly.",
+          "Equipped with dual spotting guns and illuminated exhaust hood."
         ],
         specs: [
           { key: "Power Supply", value: "380V / 50Hz" },
           { key: "Vacuum Motor Power", value: "0.55 kW" },
-          { key: "Table Heating Power", value: "1.5 kW" },
-          { key: "Boiler Heating Power", value: "3.0 kW" },
-          { key: "Steam Inlet", value: "G 1/2\"" }
+          { key: "Spotting Guns", value: "2x Pneumatic Spray Guns" },
+          { key: "Lighting Type", value: "Built-in LED Fixture" },
+          { key: "Table Dimensions", value: "110 x 80 x 180 cm" }
         ]
       }
     },
     {
-      id: "omuz-presi",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/omuz_presi.png",
+      id: "buhar-kazani-tek-cikisli",
+      category: "boiler-iron",
+      katalogCategory: "otomatik-kazanlar",
+      img: "assets/images/buhar_kazani_tek_cikisli.jpg",
       tr: {
-        title: "Omuz Ütü Presi",
-        desc: "Yüksek kalitede omuz presleme işlemlerini gerçekleştiren, seri üretime uygun endüstriyel pres makinesi.",
+        title: "Tek Çıkışlı Otomatik Buhar Kazanı",
+        desc: "Tekli profesyonel el ütüleri için otomatik su besleme ve emniyet ventilleriyle donatılmış, yüksek verimli ve kesintisiz buhar üreten kompakt buhar kazanı.",
         bullets: [
-          "Çift istasyonlu pnömatik omuz press sistemi",
-          "Endüstriyel çelik konstrüksiyon"
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Çalışma Basıncı", value: "6 Bar" },
-          { key: "Rezistans Gücü", value: "3 kW" },
-          { key: "Buhar Girişi", value: "1/2\"" },
-          { key: "Ebatlar (ExBoyxYük)", value: "120 x 90 x 150 cm" }
-        ]
-      },
-      en: {
-        title: "Shoulder Iron Press",
-        desc: "Industrial press machine suitable for mass garment production, executing high-quality shoulder pressing operations.",
-        bullets: [
-          "Double-station pneumatic shoulder press system",
-          "Industrial steel construction"
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Working Pressure", value: "6 Bar" },
-          { key: "Heating Power", value: "3 kW" },
-          { key: "Steam Inlet", value: "1/2\"" },
-          { key: "Dimensions (WxLxH)", value: "120 x 90 x 150 cm" }
-        ]
-      }
-    },
-    {
-      id: "yaka-presi",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/yaka_presi.png",
-      tr: {
-        title: "Yaka Presi",
-        desc: "Gömlek yaka ve manşetlerini hatasız bir şekilde kırmak ve şekillendirmek üzere geliştirilmiş pnömatik pres.",
-        bullets: [
-          "Gömlek yakalarında düzgün ve standart form elde edilmesini sağlar.",
-          "Seri üretime uygun yapısıyla yüksek verim ve kaliteli sonuç sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Isıtıcı Gücü", value: "4.5 kW" },
-          { key: "Çalışma Basıncı", value: "6 Bar" },
-          { key: "Hava Tüketimi", value: "15 Litre/dakika" },
-          { key: "Ebatlar (ExBoyxYük)", value: "90 x 85 x 140 cm" }
-        ]
-      },
-      en: {
-        title: "Collar Press Machine",
-        desc: "Pneumatic press developed to perfectly fold and shape shirt collars and cuffs.",
-        bullets: [
-          "Ensures flat and standardized form on shirt collars.",
-          "Offers high efficiency and top-quality results with its suitability for mass production."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Heating Power", value: "4.5 kW" },
-          { key: "Working Pressure", value: "6 Bar" },
-          { key: "Air Consumption", value: "15 Liters/min" },
-          { key: "Dimensions (WxLxH)", value: "90 x 85 x 140 cm" }
-        ]
-      }
-    },
-    {
-      id: "cep-presi",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/cep_presi.png",
-      tr: {
-        title: "Cep Kırma Presi",
-        desc: "Gömlek ve pantolon ceplerini mükemmel bir hassasiyetle katlayıp ütüleyen pnömatik cep kırma presi.",
-        bullets: [
-          "Pnömatik sistem sayesinde hızlı ve hassas cep kırma işlemi sağlar.",
-          "Endüstriyel çelik gövdesi ile uzun ömürlü profesyonel kullanım sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V" },
-          { key: "Isıtıcı Rezistans", value: "5.0 kW" },
-          { key: "Çalışma Basıncı", value: "6 Bar" },
-          { key: "Üretim Kapasitesi", value: "120 - 150 adet/saat" },
-          { key: "Ebatlar (ExBoyxYük)", value: "100 x 110 x 150 cm" }
-        ]
-      },
-      en: {
-        title: "Pocket Folding Press",
-        desc: "Pneumatic pocket creasing press that folds and irons shirt and trouser pockets with high accuracy.",
-        bullets: [
-          "Provides fast and precise pocket creasing thanks to its pneumatic system.",
-          "Durable industrial steel body ensures long-lasting professional use."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V" },
-          { key: "Heating Resistance", value: "5.0 kW" },
-          { key: "Working Pressure", value: "6 Bar" },
-          { key: "Production Capacity", value: "120 - 150 pcs/hour" },
-          { key: "Dimensions (WxLxH)", value: "100 x 110 x 150 cm" }
-        ]
-      }
-    },
-    {
-      id: "yaka-yuvarlama",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/yaka_yuvarlama.png",
-      tr: {
-        title: "Yaka Yuvarlama",
-        desc: "Ütü sonrasında gömlek yakalarına estetik ve standart yuvarlak katlama formu kazandıran özel pres makinesi.",
-        bullets: [
-          "Hassas presleme sistemi sayesinde standart ve düzgün yaka formu sağlar.",
-          "Seri üretime uygun yapısıyla hızlı ve verimli çalışma performansı sunar."
+          "Otomatik pompa sistemi ile sürekli su beslemesi ve kesintisiz buhar sağlar.",
+          "Yüksek güvenlikli emiş ve basınç limit kontrol ventilleri mevcuttur.",
+          "Kompakt tasarımı ile küçük atölyelerde yer kaplamaz."
         ],
         specs: [
           { key: "Güç Kaynağı", value: "220V / 50Hz" },
-          { key: "Isıtıcı Rezistans", value: "1.2 kW" },
-          { key: "Kontrol Sistemi", value: "Otomatik Zaman Ayarlı" },
-          { key: "Çalışma Basıncı", value: "4 - 6 Bar" },
-          { key: "Ebatlar (ExBoyxYük)", value: "60 x 50 x 80 cm" }
+          { key: "Rezistans Gücü", value: "4.0 kW" },
+          { key: "Çalışma Basıncı", value: "3.5 Bar" },
+          { key: "Kazan Hacmi", value: "8 Litre" },
+          { key: "Su Besleme", value: "Otomatik Pompa Sistemli" }
         ]
       },
       en: {
-        title: "Collar Rounding Press",
-        desc: "Specialized press machine providing shirt collars with an aesthetic, standardized curved shape after pressing.",
+        title: "Single-Outlet Automatic Steam Boiler",
+        desc: "High-efficiency compact steam boiler producing non-stop steam, equipped with automatic water feed and safety valves for single professional hand iron stations.",
         bullets: [
-          "Ensures standardized and smooth collar shape thanks to its sensitive pressing system.",
-          "Offers fast and efficient production output designed for mass assembly lines."
+          "Ensures continuous steam generation with automatic water intake pump.",
+          "Equipped with high-security safety valves and pressure limit controllers.",
+          "Save space in compact workshops thanks to its ergonomic design."
         ],
         specs: [
           { key: "Power Supply", value: "220V / 50Hz" },
-          { key: "Heating Resistance", value: "1.2 kW" },
-          { key: "Control System", value: "Automatic Timer Set" },
-          { key: "Working Pressure", value: "4 - 6 Bar" },
-          { key: "Dimensions (WxLxH)", value: "60 x 50 x 80 cm" }
+          { key: "Heating Power", value: "4.0 kW" },
+          { key: "Working Pressure", value: "3.5 Bar" },
+          { key: "Boiler Volume", value: "8 Liters" },
+          { key: "Water Intake", value: "Automatic Pump System" }
         ]
       }
     },
     {
-      id: "cep-kapak-presi",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/cep_kapak_presi.png",
+      id: "buhar-kazani-3-cikisli",
+      category: "boiler-iron",
+      katalogCategory: "otomatik-kazanlar",
+      img: "assets/images/buhar_kazani_3_cikisli.jpg",
       tr: {
-        title: "Cep Kapak Presi",
-        desc: "Hassas pnömatik presleme sistemi ile düzgün ve standart cep kapak formu sağlar.",
+        title: "3 Çıkışlı Otomatik Buhar Kazanı",
+        desc: "Aynı anda 3 adet profesyonel el ütüsünü besleyebilen, otomatik su besleme sistemi ve yüksek basınç koruma limitlerine sahip endüstriyel buhar jeneratörü.",
         bullets: [
-          "Hassas presleme sistemi ile düzgün ve standart cep kapak formu sağlar.",
-          "Seri üretime uygun yapısıyla hızlı ve verimli çalışma performansı sunar."
+          "3 farklı ütü istasyonuna eş zamanlı kesintisiz buhar desteği sunar.",
+          "Otomatik su besleme sistemi ile işletmelerde iş kaybını önler.",
+          "Paslanmaz çelik iç kazan yapısı ile uzun ömürlü kullanım sağlar."
         ],
         specs: [
           { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Isıtıcı Rezistans", value: "3.5 kW" },
-          { key: "Çalışma Hava Basıncı", value: "6 Bar" },
-          { key: "Baskı Tipi", value: "Pnömatik Baskı Sistemi" },
-          { key: "Ebatlar (ExBoyxYük)", value: "95 x 85 x 145 cm" }
+          { key: "Rezistans Gücü", value: "7.5 kW" },
+          { key: "Çalışma Basıncı", value: "4 Bar" },
+          { key: "Kazan Hacmi", value: "10 Litre" },
+          { key: "Buhar Çıkış Sayısı", value: "3 Çıkışlı" }
         ]
       },
       en: {
-        title: "Pocket Flap Press",
-        desc: "High-precision pneumatic pressing system that delivers standardized pocket flap shapes.",
+        title: "3-Outlet Automatic Steam Boiler",
+        desc: "Industrial steam generator capable of feeding up to 3 professional hand irons simultaneously, complete with automatic water intake and high pressure limits.",
         bullets: [
-          "Pneumatic pressing system delivers clean and standard pocket flap shape.",
-          "Ensures fast and high-efficiency output designed for garment production lines."
+          "Supports 3 hand iron handles simultaneously with continuous dry steam.",
+          "Automatic water feed system prevents operational delays in assembly lines.",
+          "Stainless steel inner boiler tank guarantees long-lasting service life."
         ],
         specs: [
           { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Heating Resistance", value: "3.5 kW" },
-          { key: "Working Air Pressure", value: "6 Bar" },
-          { key: "Pressing Type", value: "Pneumatic Press System" },
-          { key: "Dimensions (WxLxH)", value: "95 x 85 x 145 cm" }
+          { key: "Heating Power", value: "7.5 kW" },
+          { key: "Working Pressure", value: "4 Bar" },
+          { key: "Boiler Volume", value: "10 Liters" },
+          { key: "No. of Outlets", value: "3 Outlets" }
         ]
       }
     },
     {
-      id: "perde-paskarasi",
-      category: "table",
-      katalogCategory: "kendinden-kazanli",
-      img: "assets/images/perde_paskarasi.png",
+      id: "buhar-kazani-4-cikisli",
+      category: "boiler-iron",
+      katalogCategory: "otomatik-kazanlar",
+      img: "assets/images/buhar_kazani_4_cikisli.jpg",
       tr: {
-        title: "Kendinden Kazanlı Perde Paskarası",
-        desc: "Geniş yüzeyi ve entegre kazanı ile perdelerin hızlı ve yüksek kalitede ütülenmesini sağlayan masa.",
+        title: "4 Çıkışlı Otomatik Buhar Kazanı",
+        desc: "Orta ölçekli konfeksiyon atölyeleri için aynı anda 4 ütü istasyonunu besleyen, otomatik su pompası ve emniyet limit ventilli endüstriyel buhar kazanı.",
         bullets: [
-          "Dahili buhar kazanı sayesinde harici sisteme ihtiyaç duymadan çalışır.",
-          "Güçlü vakum sistemi ile hızlı ve profesyonel perde ütüleme sağlar."
+          "4 adet el ütüsü çıkışı ile yoğun üretim hatlarında yüksek verim sunar.",
+          "Gelişmiş basınç şalteri ve ikili emniyet ventili ile üst düzey güvenlik.",
+          "Yoğun kullanıma uygun dayanıklı endüstriyel kabin yapısı."
         ],
         specs: [
           { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Masa Rezistans Gücü", value: "3.0 kW" },
-          { key: "Kazan Rezistans Gücü", value: "6.0 kW" },
-          { key: "Vakum Motoru Gücü", value: "0.75 kW" },
-          { key: "Çalışma Buhar Basıncı", value: "4 Bar" }
+          { key: "Rezistans Gücü", value: "10.0 kW" },
+          { key: "Çalışma Basıncı", value: "4 Bar" },
+          { key: "Kazan Hacmi", value: "12 Litre" },
+          { key: "Buhar Çıkış Sayısı", value: "4 Çıkışlı" }
         ]
       },
       en: {
-        title: "Self-Boiler Curtain Ironing Table",
-        desc: "Large surfacing design and built-in boiler allowing fast, high-quality curtain ironing.",
+        title: "4-Outlet Automatic Steam Boiler",
+        desc: "Industrial steam boiler feeding up to 4 ironing stations simultaneously, optimized for medium-scale garment workshops with auto water pump and safety limits.",
         bullets: [
-          "Operates independently without needing external system due to built-in steam boiler.",
-          "High-performance suction ensures quick and professional curtain ironing."
+          "Provides high efficiency in busy production lines with 4 steam outlets.",
+          "Supreme security with advanced pressure switches and double safety valves.",
+          "Durable industrial cabinet enclosure built for heavy-duty workloads."
         ],
         specs: [
           { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Table Heating Power", value: "3.0 kW" },
-          { key: "Boiler Heating Power", value: "6.0 kW" },
-          { key: "Vacuum Motor Power", value: "0.75 kW" },
-          { key: "Working Steam Pressure", value: "4 Bar" }
-        ]
-      }
-    },
-    {
-      id: "vatka-yapistirma",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/vatka_yapistirma.png",
-      tr: {
-        title: "Omuz Vatka Yapıştırma",
-        desc: "Ceketlerin omuz vatkalarını yüksek hassasiyetli ısı ve baskı altında yapıştıran pnömatik pres makinesi.",
-        bullets: [
-          "Hassas sıcaklık ve baskı sistemi ile güçlü vatka yapıştırma sağlar.",
-          "Seri üretime uygun yapısıyla hızlı ve verimli çalışma performansı sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "220V / 380V" },
-          { key: "Rezistans Gücü", value: "2.2 kW" },
-          { key: "Kontrol Ünitesi", value: "Dijital Hassas Termostat" },
-          { key: "Çalışma Basıncı", value: "4 - 6 Bar" },
-          { key: "Ebatlar (ExBoyxYük)", value: "80 x 70 x 135 cm" }
-        ]
-      },
-      en: {
-        title: "Shoulder Pad Bonding Machine",
-        desc: "Pneumatic press that bonds coat shoulder pads firmly under highly accurate heat and pressure settings.",
-        bullets: [
-          "Provides strong shoulder-pad bonding with sensitive temperature and pressure control.",
-          "Suitable for serial garment production lines with quick and high-volume output."
-        ],
-        specs: [
-          { key: "Power Supply", value: "220V / 380V" },
-          { key: "Resistance Power", value: "2.2 kW" },
-          { key: "Control Unit", value: "Digital Precision Thermostat" },
-          { key: "Working Pressure", value: "4 - 6 Bar" },
-          { key: "Dimensions (WxLxH)", value: "80 x 70 x 135 cm" }
+          { key: "Heating Power", value: "10.0 kW" },
+          { key: "Working Pressure", value: "4 Bar" },
+          { key: "Boiler Volume", value: "12 Liters" },
+          { key: "No. of Outlets", value: "4 Outlets" }
         ]
       }
     },
@@ -490,13 +1080,14 @@
       id: "buhar-kazani-50kw",
       category: "boiler-iron",
       katalogCategory: "otomatik-kazanlar",
-      img: "assets/images/buhar_kazani_50kw.png",
+      img: "assets/images/buhar_kazani_50kw.jpg",
       tr: {
-        title: "50 KW Buhar Kazanı",
-        desc: "Paslanmaz çelik rezistansları ve yüksek emniyet ventilleri ile işletmeler için yüksek kapasiteli buhar jeneratörü.",
+        title: "50 KW Otomatik Buhar Kazanı (Merkezi Sistem)",
+        desc: "Büyük tekstil fabrikaları ve konfeksiyon tesisleri için merkezi sistem buhar dağıtımı sağlayan, paslanmaz çelik rezistanslı yüksek kapasiteli buhar jeneratörü.",
         bullets: [
-          "50 KW güçlü rezistans sistemi ile yüksek buhar üretim performansı sağlar.",
-          "Endüstriyel kullanıma uygun yapısıyla güvenli ve verimli çalışma sunar."
+          "50 KW yüksek rezistans gücü ile saatte 70 kg kesintisiz kuru buhar üretir.",
+          "Merkezi buhar dağıtım tesisatlarına bağlanabilen profesyonel altyapı.",
+          "Otomatik su seviye kontrolü ve aşırı basınç koruma sistemleri."
         ],
         specs: [
           { key: "Güç Kaynağı", value: "380V / 50Hz" },
@@ -507,15 +1098,16 @@
         ]
       },
       en: {
-        title: "50 KW Industrial Steam Boiler",
-        desc: "High-capacity steam generator with stainless elements and safety limits for large manufacturing facilities.",
+        title: "50 KW Automatic Steam Boiler (Central System)",
+        desc: "High-capacity steam generator supplying central steam distribution for large textile factories and garment plants, built with stainless elements.",
         bullets: [
-          "Delivers high-volume steam output using a powerful 50 kW heating element.",
-          "Robust industrial build ensures safe, efficient, and continuous operation."
+          "Generates 70 kg of continuous dry steam per hour with 50 KW heating capacity.",
+          "Professional infrastructure ready for central line piping connections.",
+          "Automatic water level control and overpressure cutoff safety systems."
         ],
         specs: [
           { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Resistance Power", value: "50 kW" },
+          { key: "Heating Power", value: "50 kW" },
           { key: "Steam Output", value: "70 kg / hour" },
           { key: "Boiler Volume", value: "65 Liters" },
           { key: "Working Pressure", value: "5 Bar" }
@@ -523,684 +1115,450 @@
       }
     },
     {
-      id: "leke-paskarasi",
-      category: "table",
-      katalogCategory: "leke-makinalari",
-      img: "assets/images/leke_paskarasi.png",
-      tr: {
-        title: "Kendinden Kazanlı Kabinli Leke Çıkartma Paskarası",
-        desc: "Kuru temizlemeciler ve konfeksiyon atölyeleri için kokuyu ve kimyasal buharı hapseden kabinli leke temizleme masası.",
-        bullets: [
-          "Dahili buhar kazanı sayesinde harici buhar sistemine ihtiyaç duymadan çalışır.",
-          "Güçlü vakum motoru sayesinde leke çıkarma kimyasallarını ve kokuyu çevreye yaymadan temizler."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V" },
-          { key: "Kazan Rezistans", value: "4.5 kW" },
-          { key: "Vakum Motoru", value: "0.55 kW" },
-          { key: "Emiş Tabancası", value: "Pnömatik Yüksek Debili" },
-          { key: "Ebatlar (ExBoyxYük)", value: "110 x 80 x 180 cm" }
-        ]
-      },
-      en: {
-        title: "Self-Boiler Stain Removal Cabinet Table",
-        desc: "Cabinet-enclosed spot cleaning table that traps vapors and odors for garment factories and dry cleaners.",
-        bullets: [
-          "Operates independently without needing an external steam generator.",
-          "High-suction vacuum motor removes chemical vapors and odor instantly, preventing spread."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V" },
-          { key: "Boiler Resistance", value: "4.5 kW" },
-          { key: "Vacuum Motor", value: "0.55 kW" },
-          { key: "Suction Gun", value: "High-Flow Pneumatic" },
-          { key: "Dimensions (WxLxH)", value: "110 x 80 x 180 cm" }
-        ]
-      }
-    },
-    {
-      id: "kol-ic-presi",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/kol_ic_presi.png",
-      tr: {
-        title: "Kol İç Presi",
-        desc: "Hassas presleme sistemi ile ceket ve gömlek kollarının düzgün ve standart kol iç formunu almasını sağlar. Seri üretime uygun yapısıyla hızlı ve verimlidir.",
-        bullets: [
-          "Hassas presleme sistemi ile düzgün ve standart kol iç formu sağlar.",
-          "Seri üretime uygun yapısıyla hızlı ve verimli çalışma performansı sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Isıtıcı Rezistans", value: "3.0 kW" },
-          { key: "Çalışma Basıncı", value: "6 Bar" },
-          { key: "Hava Tüketimi", value: "12 Litre/dakika" },
-          { key: "Ebatlar (ExBoyxYük)", value: "110 x 80 x 140 cm" }
-        ]
-      },
-      en: {
-        title: "Sleeve Inner Press",
-        desc: "Ensures coat and shirt sleeves obtain a standardized inner seam shape. High-speed operational features make it ideal for mass garment assembly lines.",
-        bullets: [
-          "Pneumatic pressing system delivers standardized sleeve seam lines.",
-          "High operational speeds suitable for large industrial clothing factories."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Heating Resistance", value: "3.0 kW" },
-          { key: "Working Pressure", value: "6 Bar" },
-          { key: "Air Consumption", value: "12 Liters/min" },
-          { key: "Dimensions (WxLxH)", value: "110 x 80 x 140 cm" }
-        ]
-      }
-    },
-    {
-      id: "tek-cikisli-kazan-oto",
-      category: "boiler-iron",
-      katalogCategory: "el-utu-firca",
-      img: "assets/images/tek_cikisli_kazan_oto.png",
-      tr: {
-        title: "Tek Çıkışlı Full Otomatik Buhar Kazanı",
-        desc: "Full otomatik emniyet ve pompa sistemleri ile son derece güvenli ve kesintisiz buhar üretimi sağlar. Tek çıkışlı yapısı sayesinde profesyonel el ütülerini beslemek için idealdir.",
-        bullets: [
-          "Full otomatik sistemi ile güvenli ve verimli buhar üretimi sağlar.",
-          "Tek çıkışlı yapısıyla profesyonel ütü sistemleriyle uyumlu çalışır."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "220V / 50Hz" },
-          { key: "Rezistans Gücü", value: "4 kW" },
-          { key: "Çalışma Basıncı", value: "3.5 Bar" },
-          { key: "Kazan Hacmi", value: "8 Litre" },
-          { key: "Su Besleme Tipi", value: "Otomatik Pompalı Sistem" }
-        ]
-      },
-      en: {
-        title: "Single-Outlet Fully Automatic Steam Boiler",
-        desc: "Equipped with automatic safety valves and auto water intake pump systems to produce safe, non-stop steam. Best suited for single professional hand iron stations.",
-        bullets: [
-          "Ensures safe and efficient steam generation with its fully automatic systems.",
-          "Single outlet configuration is fully compatible with professional iron handles."
-        ],
-        specs: [
-          { key: "Power Supply", value: "220V / 50Hz" },
-          { key: "Heating Power", value: "4 kW" },
-          { key: "Working Pressure", value: "3.5 Bar" },
-          { key: "Boiler Volume", value: "8 Liters" },
-          { key: "Water Intake Type", value: "Automatic Pump System" }
-        ]
-      }
-    },
-    {
-      id: "dar-kollu-paskara",
-      category: "table",
-      katalogCategory: "utu-masalari",
-      img: "assets/images/dar_kollu_paskara.png",
-      tr: {
-        title: "Dar Kollu Paskara",
-        desc: "Dar alanlarda hassas ve profesyonel ütüleme sağlayan vakumlu masa. Gömlek, ceket ve palto kollarının düzgün ütülenmesi için ısıtmalı dar kol aparatı entegredir.",
-        bullets: [
-          "Dar alanlarda hassas ve profesyonel ütüleme performansı sağlar.",
-          "Güçlü vakum sistemi ile hızlı ve verimli çalışma sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "220V / 380V" },
-          { key: "Vakum Motor Gücü", value: "0.37 kW" },
-          { key: "Masa Rezistans Gücü", value: "1.5 kW" },
-          { key: "Kol Isıtma Aparatı", value: "Dahili Rezistanslı" },
-          { key: "Ebatlar (ExBoyxYük)", value: "135 x 45 x 90 cm" }
-        ]
-      },
-      en: {
-        title: "Narrow Ironing Table with Sleeve Arm",
-        desc: "Professional vacuum ironing table suited for high precision results in compact areas. Features a built-in heated sleeve arm for shirt and jacket sleeve shaping.",
-        bullets: [
-          "Delivers precise and professional ironing results even in tight spaces.",
-          "Strong suction vacuum motor ensures fast, dry, and clean fabric output."
-        ],
-        specs: [
-          { key: "Power Supply", value: "220V / 380V" },
-          { key: "Vacuum Motor Power", value: "0.37 kW" },
-          { key: "Table Heating Power", value: "1.5 kW" },
-          { key: "Sleeve Arm Heating", value: "Integrated Resistance" },
-          { key: "Dimensions (WxLxH)", value: "135 x 45 x 90 cm" }
-        ]
-      }
-    },
-    {
-      id: "tek-cikisli-kazan-yari",
-      category: "boiler-iron",
-      katalogCategory: "kazanli-utu",
-      img: "assets/images/tek_cikisli_kazan_yari.png",
-      tr: {
-        title: "Yarı Otomatik Tek Çıkışlı Buhar Kazanı",
-        desc: "Yarı otomatik su besleme sistemi ile kontrollü ve güvenli buhar üretimi sağlar. Kompakt ve ergonomik tasarımı ile küçük atölyeler ve kuru temizlemeciler için uygundur.",
-        bullets: [
-          "Yarı otomatik sistemi ile güvenli ve kontrollü buhar üretimi sağlar.",
-          "Tek çıkışlı yapısıyla profesyonel ütü sistemlerinde verimli kullanım sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "220V / 50Hz" },
-          { key: "Rezistans Gücü", value: "3 kW" },
-          { key: "Çalışma Basıncı", value: "3 Bar" },
-          { key: "Kazan Hacmi", value: "5 Litre" },
-          { key: "Emniyet Sistemi", value: "Çift Mekanik Limit Ventili" }
-        ]
-      },
-      en: {
-        title: "Single-Outlet Semi-Automatic Steam Boiler",
-        desc: "Generates controlled and reliable high pressure steam using a semi-automatic valve system. Its compact design is a perfect fit for dry cleaners and small garment studios.",
-        bullets: [
-          "Ensures controlled and safe steam generation with semi-automatic control switches.",
-          "Single-outlet layout is ideal for single professional ironing tables."
-        ],
-        specs: [
-          { key: "Power Supply", value: "220V / 50Hz" },
-          { key: "Heating Power", value: "3 kW" },
-          { key: "Working Pressure", value: "3 Bar" },
-          { key: "Boiler Volume", value: "5 Liters" },
-          { key: "Safety Valve", value: "Double Mechanical Limits" }
-        ]
-      }
-    },
-    {
-      id: "pantolon-sisirme",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/pantolon_sisirme.png",
-      tr: {
-        title: "Kendinden Kazanlı Yatay Pantolon Şişirme Makinesi",
-        desc: "Güçlü sıcak hava şişirme ve buhar verme sistemi ile pantolonlara ütü öncesi düzgün form kazandırır. Kendinden buhar kazanı sayesinde harici buhar kaynağı gerektirmez.",
-        bullets: [
-          "Güçlü sıcak hava sistemi ile pantolonlara düzgün form kazandırır.",
-          "Kendinden kazanlı yapısı sayesinde harici buhar kazanı gerektirmez."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V" },
-          { key: "Blower Fan Motoru", value: "0.75 kW" },
-          { key: "Kazan Rezistans", value: "6.0 kW" },
-          { key: "Çalışma Buhar Basıncı", value: "4 Bar" },
-          { key: "Ebatlar (ExBoyxYük)", value: "140 x 60 x 100 cm" }
-        ]
-      },
-      en: {
-        title: "Self-Boiler Horizontal Trousers Topper",
-        desc: "Utilizes a heavy-duty heated blower and steam injection system to pre-shape trousers before pressing. Features its own boiler, eliminating external steam dependencies.",
-        bullets: [
-          "Shapes trousers perfectly using a high-flow hot air blowing system.",
-          "Operates independently without external steam boiler requirements due to its built-in tank."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V" },
-          { key: "Blower Fan Power", value: "0.75 kW" },
-          { key: "Boiler Resistance", value: "6.0 kW" },
-          { key: "Working Steam Pressure", value: "4 Bar" },
-          { key: "Dimensions (WxLxH)", value: "140 x 60 x 100 cm" }
-        ]
-      }
-    },
-    {
-      id: "cift-cep-kirma-presi",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/cift_cep_kirma_presi.png",
-      tr: {
-        title: "Çift Cep Kırma Presi",
-        desc: "Çift istasyon yapısı ile üretim kapasitesini maksimize eden, gömlek ve pantolon cepleri için tasarlanmış profesyonel pres.",
-        bullets: [
-          "Çift istasyon sistemi ile üretim hızını artırır.",
-          "Hassas presleme teknolojisi sayesinde düzgün cep formu sağlar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Isıtıcı Rezistans", value: "7.5 kW" },
-          { key: "Çalışma Basıncı", value: "6 Bar" },
-          { key: "İstasyon Sayısı", value: "2 (Çift İstasyonlu)" },
-          { key: "Ebatlar (ExBoyxYük)", value: "135 x 115 x 150 cm" }
-        ]
-      },
-      en: {
-        title: "Double Pocket Creasing Press",
-        desc: "Professional press designed for shirt and trouser pockets, maximizing production capacity with double stations.",
-        bullets: [
-          "Increases production speeds with its double-station pneumatic layout.",
-          "Provides neat and uniform pocket shapes utilizing precision pressing technologies."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Heating Power", value: "7.5 kW" },
-          { key: "Working Pressure", value: "6 Bar" },
-          { key: "No. of Stations", value: "2 (Double-Station)" },
-          { key: "Dimensions (WxLxH)", value: "135 x 115 x 150 cm" }
-        ]
-      }
-    },
-    {
-      id: "kabinli-leke-paskarasi",
-      category: "table",
-      katalogCategory: "leke-makinalari",
-      img: "assets/images/kabinli_leke_paskarasi.png",
-      tr: {
-        title: "Kabinli Leke Çıkartma Paskarası",
-        desc: "Kapalı kabin yapısıyla solvent ve kimyasal buharları absorbe eden, tekstil atölyeleri için profesyonel leke çıkarma masası.",
-        bullets: [
-          "Güçlü vakum sistemi sayesinde lekeleri hızlı ve etkili şekilde temizler.",
-          "Kabinli yapısı ile buhar ve kimyasal yayılımını minimum seviyeye indirir."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V" },
-          { key: "Vakum Motoru", value: "0.55 kW" },
-          { key: "Kabin Aydınlatması", value: "Dahili LED Armatür" },
-          { key: "Kimyasal Tabancası", value: "2 Adet Pnömatik Tabanca" },
-          { key: "Ebatlar (ExBoyxYük)", value: "100 x 85 x 185 cm" }
-        ]
-      },
-      en: {
-        title: "Stain Removal Table with Cabinet",
-        desc: "Professional spot cleaning table for garment factories that absorbs solvent and chemical fumes with its enclosed cabinet.",
-        bullets: [
-          "Cleans stains rapidly and effectively thanks to its high-vacuum extraction.",
-          "Enclosed cabinet keeps chemical and steam emission at a minimum level."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V" },
-          { key: "Vacuum Motor", value: "0.55 kW" },
-          { key: "Cabinet Lighting", value: "Built-in LED" },
-          { key: "Chemical Guns", value: "2x Pneumatic Spray Guns" },
-          { key: "Dimensions (WxLxH)", value: "100 x 85 x 185 cm" }
-        ]
-      }
-    },
-    {
-      id: "dikis-acma-paskarasi",
+      id: "tasarruflu-dar-paskara",
       category: "table",
       katalogCategory: "tasarruflu",
-      img: "assets/images/dikis_acma_paskarasi.png",
+      img: "assets/images/tasarruflu_dar_paskara.jpg",
       tr: {
-        title: "Kendinden Kazanlı Dikiş Açma Paskarası",
-        desc: "Gömlek, ceket ve pantolon dikiş hatlarını açmak ve düzgünleştirmek için entegre kazanlı dikiş paskarası.",
+        title: "Tasarruflu Dar Paskara",
+        desc: "Düşük enerji sarfiyatı sağlayan çevre dostu ısıtma rezistansları ve yüksek verimli vakum motoru ile hem bütçe hem çevre dostu dar ütü masası.",
         bullets: [
-          "Güçlü vakum sistemi sayesinde profesyonel ütüleme performansı sağlar.",
-          "Dahili buhar kazanı ile harici buhar sistemine ihtiyaç duymaz."
+          "Gelişmiş termostat teknolojisi ile %30'a varan enerji tasarrufu sağlar.",
+          "Yüksek verimli sessiz vakum motoru ile mükemmel buhar çekişi sunar.",
+          "Dar yapısı ile gömlek, pantolon ve paça ütülemede yüksek ergonomi sağlar."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "220V / 380V" },
-          { key: "Rezistans Gücü", value: "1.5 kW" },
-          { key: "Kazan Rezistans Gücü", value: "3 kW" },
-          { key: "Vakum Gücü", value: "0.37 kW" },
-          { key: "Masa Tipi", value: "Isıtmalı Dar Dikiş Paskarası" }
-        ]
-      },
-      en: {
-        title: "Self-Boiler Seam Opening Ironing Table",
-        desc: "Seam opening ironing table with built-in boiler to smooth shirt, coat, and trouser seam lines.",
-        bullets: [
-          "Provides professional ironing performance with its high-suction vacuum motor.",
-          "Integrated steam boiler eliminates the need for external steam supplies."
-        ],
-        specs: [
-          { key: "Power Supply", value: "220V / 380V" },
-          { key: "Resistance Power", value: "1.5 kW" },
-          { key: "Boiler Power", value: "3 kW" },
-          { key: "Vacuum Power", value: "0.37 kW" },
-          { key: "Table Type", value: "Heated Narrow Seam Table" }
-        ]
-      }
-    },
-    {
-      id: "buhar-kazani-4-cikisli",
-      category: "boiler-iron",
-      katalogCategory: "otomatik-kazanlar",
-      img: "assets/images/buhar_kazani_4_cikisli.png",
-      tr: {
-        title: "4 Çıkışlı Buhar Kazanı",
-        desc: "Aynı anda 4 el ütüsünü besleyebilen, emniyet valfli ve basınç kontrollü endüstriyel buhar jeneratörü.",
-        bullets: [
-          "Aynı anda 4 farklı çıkıştan güçlü buhar desteği sağlar.",
-          "Yoğun üretim yapan tekstil ve ütü işletmeleri için ideal kullanım sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Rezistans Gücü", value: "12 kW / 18 kW" },
-          { key: "Çalışma Basıncı", value: "4 Bar" },
-          { key: "Çıkış Sayısı", value: "4 Adet Buhar Çıkışı" },
-          { key: "Kazan Hacmi", value: "30 Litre" }
-        ]
-      },
-      en: {
-        title: "4-Outlet Steam Boiler",
-        desc: "Industrial steam generator with safety valves and pressure control, feeding up to 4 hand irons simultaneously.",
-        bullets: [
-          "Delivers strong steam support from 4 separate outlets at the same time.",
-          "Ideal option for high-volume textile mills and busy ironing companies."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Resistance Power", value: "12 kW / 18 kW" },
-          { key: "Working Pressure", value: "4 Bar" },
-          { key: "No. of Outlets", value: "4x Steam Outlets" },
-          { key: "Boiler Volume", value: "30 Liters" }
-        ]
-      }
-    },
-    {
-      id: "dar-paskara-standart",
-      category: "table",
-      katalogCategory: "rezistanli",
-      img: "assets/images/dar_paskara_standart.png",
-      tr: {
-        title: "Dar Paskara",
-        desc: "Kompakt boyutları ile atölyelerde yer kaplamayan, vakumlu ve ısıtmalı standart dar paskara.",
-        bullets: [
-          "Dar alan ütüleme işlemleri için ergonomik ve profesyonel kullanım sağlar.",
-          "Vakumlu sistemi sayesinde kumaşta düzgün ve kaliteli ütü sonucu sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "220V" },
-          { key: "Vakum Motoru", value: "0.37 kW" },
-          { key: "Rezistans Gücü", value: "1.2 kW" },
-          { key: "Ebatlar (ExBoyxYük)", value: "130 x 40 x 90 cm" }
-        ]
-      },
-      en: {
-        title: "Standard Narrow Ironing Table",
-        desc: "Standard narrow ironing table with vacuum suction and heating elements, saving space in small workshops.",
-        bullets: [
-          "Provides ergonomic and professional usability for narrow ironing areas.",
-          "Vacuum system ensures flat, crease-free, and high-quality ironing results."
-        ],
-        specs: [
-          { key: "Power Supply", value: "220V" },
-          { key: "Vacuum Motor", value: "0.37 kW" },
-          { key: "Table Heating", value: "1.2 kW" },
-          { key: "Dimensions (WxLxH)", value: "130 x 40 x 90 cm" }
-        ]
-      }
-    },
-    {
-      id: "mostra-presi",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/mostra_presi.png",
-      tr: {
-        title: "Mostra Presi",
-        desc: "Tekstil ürünlerinin ön mostra, etek ve cep kısımlarını hassas ve standart preslemek için kullanılan endüstriyel pres.",
-        bullets: [
-          "Tekstil ürünlerinde hızlı ve profesyonel presleme işlemi sağlar.",
-          "Dayanıklı yapısı ve otomatik sistemi ile endüstriyel kullanıma uygundur."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Isıtıcı Rezistans", value: "6.0 kW" },
-          { key: "Çalışma Basıncı", value: "6 Bar" },
-          { key: "Otomasyon Sistemi", value: "Mikroişlemci Kart Kontrollü" },
-          { key: "Ebatlar (ExBoyxYük)", value: "140 x 110 x 150 cm" }
-        ]
-      },
-      en: {
-        title: "Facing (Mostra) Press Machine",
-        desc: "Industrial press machine utilized for pressing the front facings, pocket welts, and hems of suits and coats.",
-        bullets: [
-          "Ensures fast and highly professional pressing operations for apparel products.",
-          "Heavy-duty construction and automatic controls are ideal for industrial use."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Heating Resistance", value: "6.0 kW" },
-          { key: "Working Pressure", value: "6 Bar" },
-          { key: "Automation System", value: "Microprocessor Board Control" },
-          { key: "Dimensions (WxLxH)", value: "140 x 110 x 150 cm" }
-        ]
-      }
-    },
-    {
-      id: "on-pres-utu",
-      category: "press",
-      katalogCategory: "endustriyel",
-      img: "assets/images/on_pres_utu.png",
-      tr: {
-        title: "Ön Pres Ütüleme Makinesi",
-        desc: "Ceket ön kısımlarına telalanma öncesinde düzgünlük kazandıran buhar ısıtmalı pnömatik ön pres makinesi.",
-        bullets: [
-          "Güçlü buhar destekli sistemi ile profesyonel presleme sağlar.",
-          "Endüstriyel kullanım için dayanıklı ve verimli çalışma sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Rezistans Gücü", value: "4.5 kW" },
-          { key: "Çalışma Basıncı", value: "6 Bar" },
-          { key: "Buhar Giriş Ölçüsü", value: "1/2 inç" },
-          { key: "Ebatlar (ExBoyxYük)", value: "115 x 100 x 140 cm" }
-        ]
-      },
-      en: {
-        title: "Front Part Pre-Pressing Machine",
-        desc: "Steam-heated pneumatic pre-pressing machine giving coat front parts flat structure before interlining fusing.",
-        bullets: [
-          "Provides professional pressing results with its steam-supported pneumatic system.",
-          "Extremely durable configuration optimized for efficient industrial operations."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Heating Power", value: "4.5 kW" },
-          { key: "Working Pressure", value: "6 Bar" },
-          { key: "Steam Inlet Size", value: "1/2 inch" },
-          { key: "Dimensions (WxLxH)", value: "115 x 100 x 140 cm" }
-        ]
-      }
-    },
-    {
-      id: "buhar-kazani-3-cikisli",
-      category: "boiler-iron",
-      katalogCategory: "otomatik-kazanlar",
-      img: "assets/images/buhar_kazani_3_cikisli.png",
-      tr: {
-        title: "3 Çıkışlı Buhar Kazanı",
-        desc: "Aynı anda 3 ütü istasyonunu besleyebilen, emniyet limitli ve paslanmaz iç kazanlı buhar jeneratörü.",
-        bullets: [
-          "Aynı anda 3 farklı ütü sistemine güçlü buhar desteği sağlar.",
-          "Endüstriyel kullanım için dayanıklı ve yüksek performanslı yapı sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Rezistans Gücü", value: "9.0 kW / 12.0 kW" },
-          { key: "Çalışma Buhar Basıncı", value: "4 Bar" },
-          { key: "Kazan Hacmi", value: "20 Litre" },
-          { key: "Buhar Çıkış Adedi", value: "3 Adet Vana Çıkışı" }
-        ]
-      },
-      en: {
-        title: "3-Outlet Steam Boiler",
-        desc: "Steam generator with stainless steel inner tank and safety limits, feeding up to 3 ironing stations.",
-        bullets: [
-          "Provides strong steam feeding for 3 separate iron systems simultaneously.",
-          "Delivers durable construction and high-performance output for factory floors."
-        ],
-        specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Resistance Power", value: "9.0 kW / 12.0 kW" },
-          { key: "Working Steam Pressure", value: "4 Bar" },
-          { key: "Boiler Volume", value: "20 Liters" },
-          { key: "No. of Outlets", value: "3x Valve Outlets" }
-        ]
-      }
-    },
-    {
-      id: "mini-dar-paskara",
-      category: "table",
-      katalogCategory: "rezistanli",
-      img: "assets/images/mini_dar_paskara.png",
-      tr: {
-        title: "Mini Koymalı Dar Paskara",
-        desc: "Pantolon paçaları, kollar ve detay dikişler için özel olarak tasarlanmış, mini boy pürüzsüz vakumlu paskara.",
-        bullets: [
-          "Dar yapısı sayesinde pantolon paça ve kol bölgelerinde hassas ütüleme sağlar.",
-          "Güçlü vakum sistemi ile kumaş üzerinde pürüzsüz ve profesyonel sonuç sunar."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "220V" },
+          { key: "Güç Kaynağı", value: "230V" },
           { key: "Vakum Motoru Gücü", value: "0.25 kW" },
-          { key: "Rezistans Gücü", value: "1.0 kW" },
-          { key: "Masa Yapısı", value: "Hassas Paça Aparatlı" },
-          { key: "Ebatlar (ExBoyxYük)", value: "110 x 35 x 85 cm" }
+          { key: "Masa Isıtıcı Gücü", value: "1.0 kW" },
+          { key: "Masa Ebatları", value: "135 x 40 cm" }
         ]
       },
       en: {
-        title: "Mini Narrow Ironing Table",
-        desc: "Mini-sized smooth vacuum table designed specifically for pants bottoms, sleeve lines, and detailed seams.",
+        title: "Eco-Friendly Narrow Ironing Table",
+        desc: "Budget and environmentally friendly narrow ironing table with low energy consumption heating resistors and high-efficiency vacuum motor.",
         bullets: [
-          "Narrow frame enables precise ironing on trouser cuffs and sleeve areas.",
-          "High suction vacuum motor guarantees smooth, flat, and professional fabric result."
+          "Saves up to 30% energy with its advanced thermostat technology.",
+          "Delivers perfect steam extraction with a high-efficiency silent vacuum motor.",
+          "Narrow structure offers high ergonomics for ironing shirts and pants cuffs."
         ],
         specs: [
-          { key: "Power Supply", value: "220V" },
+          { key: "Power Supply", value: "230V" },
           { key: "Vacuum Motor Power", value: "0.25 kW" },
-          { key: "Heating Power", value: "1.0 kW" },
-          { key: "Table Style", value: "Trouser Cuff Shaped" },
-          { key: "Dimensions (WxLxH)", value: "110 x 35 x 85 cm" }
+          { key: "Table Heating Power", value: "1.0 kW" },
+          { key: "Table Dimensions", value: "135 x 40 cm" }
         ]
       }
     },
     {
-      id: "leke-paskarasi-kazanli",
-      category: "table",
-      katalogCategory: "leke-makinalari",
-      img: "assets/images/leke_paskarasi_kazanli.png",
-      tr: {
-        title: "Kendinden Kazanlı Leke Çıkartma Paskarası",
-        desc: "Dahili kazan ve vakum motorlu leke paskarası. Kumaş üzerindeki lekelerin buhar ve vakum tabancasıyla anında çıkarılmasını sağlar.",
-        bullets: [
-          "Güçlü vakum sistemi ile profesyonel leke çıkarma performansı sağlar.",
-          "Dahili buhar kazanı sayesinde harici buhar sistemine ihtiyaç duymaz."
-        ],
-        specs: [
-          { key: "Güç Kaynağı", value: "220V / 380V" },
-          { key: "Rezistans Gücü", value: "1.5 kW" },
-          { key: "Kazan Rezistansı", value: "4.5 kW" },
-          { key: "Vakum Motor Gücü", value: "0.55 kW" },
-          { key: "Tabanca Sistemi", value: "Buhar ve Leke Püskürtme Tabancalı" }
-        ]
-      },
-      en: {
-        title: "Self-Boiler Stain Removal Table",
-        desc: "Spotting table with built-in boiler and vacuum. Enables instant stain removal using vacuum and chemical spray guns.",
-        bullets: [
-          "Ensures professional stain extraction performance with its strong vacuum motor.",
-          "Built-in steam generator cuts off dependencies on external boiler facilities."
-        ],
-        specs: [
-          { key: "Power Supply", value: "220V / 380V" },
-          { key: "Table Heating", value: "1.5 kW" },
-          { key: "Boiler Heating", value: "4.5 kW" },
-          { key: "Vacuum Motor Power", value: "0.55 kW" },
-          { key: "Gun Systems", value: "Equipped with Steam and Spotting Spray Guns" }
-        ]
-      }
-    },
-    {
-      id: "genis-paskara-kazanli",
+      id: "tasarruflu-genis-paskara-kollu",
       category: "table",
       katalogCategory: "tasarruflu",
-      img: "assets/images/genis_paskara_kazanli.png",
+      img: "assets/images/tasarruflu_genis_paskara_kollu.jpg",
       tr: {
-        title: "Kendinden Kazanlı Geniş Paskara",
-        desc: "Geniş ütüleme yüzeyi ve entegre kazanı ile çarşaf, perde, kaban gibi büyük parçaları yüksek verimle ütüleyen paskara.",
+        title: "Tasarruflu Geniş Paskara (Kollu)",
+        desc: "Geniş çalışma yüzeyi, düşük enerji tüketimli ısıtma sistemi ve döner mafsallı kol aparatı ile ceket, kaban ve büyük ebatlı kumaşlar için optimum tasarruf.",
         bullets: [
-          "Geniş ütüleme yüzeyi ile büyük tekstil ürünlerinde yüksek çalışma konforu sunar.",
-          "Dahili buhar kazanı sayesinde harici buhar sistemine ihtiyaç duymadan verimli kullanım sağlar."
+          "Geniş tabla yüzeyi ve ısıtmalı dar kol aparatı maksimum verimlilik sunar.",
+          "Özel yalıtımlı gövde yapısı sayesinde ısı kaybını minimuma indirir.",
+          "Yüksek debili emiş motoru kumaşı hızlıca kurutur."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Masa Rezistans Gücü", value: "2.5 kW" },
-          { key: "Kazan Rezistans Gücü", value: "4.5 kW / 6.0 kW" },
-          { key: "Vakum Motoru", value: "0.55 kW" },
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "1.8 kW" },
+          { key: "Kol Isıtıcı Gücü", value: "0.4 kW" },
           { key: "Masa Ebatları", value: "150 x 80 cm" }
         ]
       },
       en: {
-        title: "Self-Boiler Wide Ironing Table",
-        desc: "Wide ironing table with built-in boiler, pressing large fabrics like sheets, curtains, and coats with high efficiency.",
+        title: "Eco-Friendly Wide Ironing Table with Sleeve Arm",
+        desc: "Optimum savings for jackets, coats, and large fabrics with its wide working surface, low-energy consumption heating system, and rotating sleeve arm.",
         bullets: [
-          "Wide surfacing delivers high comfort and easy movement when ironing large textiles.",
-          "Built-in boiler enables independent and efficient operation without external steam sources."
+          "Offers maximum efficiency with a wide table surface and a heated narrow sleeve board.",
+          "Minimizes heat loss thanks to its specially insulated body structure.",
+          "High-flow suction motor dries the fabric quickly."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Table Heating", value: "2.5 kW" },
-          { key: "Boiler Heating", value: "4.5 kW / 6.0 kW" },
-          { key: "Vacuum Motor", value: "0.55 kW" },
-          { key: "Table Area Size", value: "150 x 80 cm" }
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.55 kW" },
+          { key: "Table Heating Power", value: "1.8 kW" },
+          { key: "Sleeve Heating Power", value: "0.4 kW" },
+          { key: "Table Dimensions", value: "150 x 80 cm" }
         ]
       }
     },
     {
-      id: "dar-kollu-paskara-kazanli",
+      id: "tasarruflu-genis-paskara",
       category: "table",
-      katalogCategory: "kendinden-kazanli",
-      img: "assets/images/dar_kollu_paskara_kazanli.png",
+      katalogCategory: "tasarruflu",
+      img: "assets/images/tasarruflu_genis_paskara.jpg",
       tr: {
-        title: "Kendinden Kazanlı Dar Kollu Paskara",
-        desc: "Dahili kazanlı ve vakumlu ütü masası. Gömlek ve ceket kollarını kusursuz ütülemek için özel olarak ısıtmalı dar kol aparatı barındırır.",
+        title: "Tasarruflu Geniş Paskara",
+        desc: "Büyük parça ütüleme ihtiyaçlarında yüksek enerji verimliliği sağlayan, yalıtımlı rezistanslara sahip geniş vakumlu sanayi tipi ütü masası.",
         bullets: [
-          "Güçlü vakum sistemi sayesinde profesyonel ütüleme performansı sağlar.",
-          "Dahili buhar kazanı ile harici buhar sistemine ihtiyaç duymaz."
+          "Yalıtımlı tabla rezistansları ile elektrik tüketimini en aza indirir.",
+          "Geniş üst tabla yapısı çarşaf, perde ve nevresimler için idealdir.",
+          "Çift vakum kanallı güçlü emiş sistemi nem kalıntısı bırakmaz."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "220V / 380V" },
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "1.8 kW" },
+          { key: "Masa Ebatları", value: "150 x 80 cm" }
+        ]
+      },
+      en: {
+        title: "Eco-Friendly Wide Ironing Table",
+        desc: "Large vacuum industrial ironing table with insulated resistance elements, providing high energy efficiency for large-scale ironing needs.",
+        bullets: [
+          "Minimizes electricity consumption with insulated table heating resistors.",
+          "Wide top board design is ideal for sheets, curtains, and linens.",
+          "Double vacuum channel suction system leaves no moisture residue."
+        ],
+        specs: [
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.55 kW" },
+          { key: "Table Heating Power", value: "1.8 kW" },
+          { key: "Table Dimensions", value: "150 x 80 cm" }
+        ]
+      }
+    },
+    {
+      id: "tasarruflu-dar-paskara-kollu",
+      category: "table",
+      katalogCategory: "tasarruflu",
+      img: "assets/images/tasarruflu_dar_paskara_kollu.jpg",
+      tr: {
+        title: "Tasarruflu Dar Paskara (Kollu)",
+        desc: "Düşük elektrik tüketimi, güçlü vakum motoru ve ısıtmalı dar kol aparatı ile konfeksiyonlarda dikiş açma ve hassas ütüleme işlemlerinde enerji tasarrufu sağlar.",
+        bullets: [
+          "Hassas termostatı sayesinde gereksiz elektrik tüketimini önler.",
+          "Isıtmalı kol aparatı gömlek ve ceket kollarında mükemmel dikiş kırma sağlar.",
+          "Vakumlu emiş gücü nem birikmesini engeller ve ütüleme kalitesini artırır."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "230V" },
+          { key: "Vakum Motoru Gücü", value: "0.25 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "1.0 kW" },
+          { key: "Kol Isıtıcı Gücü", value: "0.4 kW" },
+          { key: "Masa Ebatları", value: "135 x 40 cm" }
+        ]
+      },
+      en: {
+        title: "Eco-Friendly Narrow Ironing Table with Sleeve Arm",
+        desc: "Provides energy savings in garment workshops for seam flattening and precise ironing with low power consumption, strong vacuum, and heated narrow sleeve arm.",
+        bullets: [
+          "Prevents unnecessary electricity consumption thanks to its precise thermostat.",
+          "Heated sleeve board provides perfect seam creasing on shirt and jacket sleeves.",
+          "Vacuum suction prevents moisture build-up and enhances ironing quality."
+        ],
+        specs: [
+          { key: "Power Supply", value: "230V" },
+          { key: "Vacuum Motor Power", value: "0.25 kW" },
+          { key: "Table Heating Power", value: "1.0 kW" },
+          { key: "Sleeve Heating Power", value: "0.4 kW" },
+          { key: "Table Dimensions", value: "135 x 40 cm" }
+        ]
+      }
+    },
+    {
+      id: "rezistansli-dar-paskara-kollu",
+      category: "table",
+      katalogCategory: "rezistanli",
+      img: "assets/images/rezistansli_dar_paskara_kollu.jpg",
+      tr: {
+        title: "Rezistanslı Dar Paskara (Kollu)",
+        desc: "Güçlü vakum sistemi, rezistans ısıtmalı üst tablası ve ısıtmalı dar kol aparatı sayesinde ceket, gömlek ve pantolon ütülemede pürüzsüz sonuçlar sağlar.",
+        bullets: [
+          "Rezistans ısıtmalı üst tabla ile yüzeyin her zaman kuru kalmasını sağlar.",
+          "Isıtmalı dar kol paskara aparatı ile kol bölgelerinde kusursuz dikiş açma ve ütüleme sağlar.",
+          "Güçlü vakum motoru nemi kumaştan hızlıca uzaklaştırır."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "230V" },
           { key: "Vakum Motoru Gücü", value: "0.37 kW" },
-          { key: "Masa Rezistans Gücü", value: "1.5 kW" },
-          { key: "Dahili Kazan Gücü", value: "3.0 kW" },
-          { key: "Kol Aparatı", value: "Isıtmalı Kol Paskaralı" }
+          { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
+          { key: "Kol Isıtıcı Gücü", value: "0.5 kW" },
+          { key: "Masa Ebatları", value: "135 x 40 cm" }
+        ]
+      },
+      en: {
+        title: "Resistor Narrow Ironing Table with Sleeve Arm",
+        desc: "Ensures smooth ironing results for jackets, shirts, and trousers thanks to its strong vacuum system, resistance-heated top board, and heated narrow sleeve arm.",
+        bullets: [
+          "Resistance-heated board keeps the surface completely dry during operation.",
+          "Heated narrow sleeve board attachment ensures perfect sleeve creasing and pressing.",
+          "High-suction vacuum motor quickly removes moisture from the fabric."
+        ],
+        specs: [
+          { key: "Power Supply", value: "230V" },
+          { key: "Vacuum Motor Power", value: "0.37 kW" },
+          { key: "Table Heating Power", value: "1.5 kW" },
+          { key: "Sleeve Heating Power", value: "0.5 kW" },
+          { key: "Table Dimensions", value: "135 x 40 cm" }
+        ]
+      }
+    },
+    {
+      id: "rezistansli-dar-paskara",
+      category: "table",
+      katalogCategory: "rezistanli",
+      img: "assets/images/rezistansli_dar_paskara.jpg",
+      tr: {
+        title: "Rezistanslı Dar Paskara",
+        desc: "Kompakt tasarımı, rezistans ısıtmalı üst tablası ve profesyonel vakum emişi ile tekstil atölyeleri ve kuru temizlemeciler için mükemmel ütü masası.",
+        bullets: [
+          "Elektrik rezistans ısıtmalı üst tabla sayesinde su yoğuşmasını önler.",
+          "Güçlü vakumlu emiş sistemi ile kumaşı tabla üzerinde sabitler.",
+          "Kompakt ve dar yapısı sayesinde küçük atölyelerde yer tasarrufu sağlar."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "230V" },
+          { key: "Vakum Motoru Gücü", value: "0.37 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
+          { key: "Masa Ebatları", value: "135 x 40 cm" }
+        ]
+      },
+      en: {
+        title: "Resistor Narrow Ironing Table",
+        desc: "Perfect ironing table for garment workshops and dry cleaners with its compact design, resistance-heated top board, and professional vacuum suction.",
+        bullets: [
+          "Electric resistance-heated board prevents condensation and water drop accumulation.",
+          "High-performance vacuum suction holds the fabric securely on the table.",
+          "Compact and narrow structure saves space in small workshops."
+        ],
+        specs: [
+          { key: "Power Supply", value: "230V" },
+          { key: "Vacuum Motor Power", value: "0.37 kW" },
+          { key: "Table Heating Power", value: "1.5 kW" },
+          { key: "Table Dimensions", value: "135 x 40 cm" }
+        ]
+      }
+    },
+    {
+      id: "rezistansli-genis-paskara",
+      category: "table",
+      katalogCategory: "rezistanli",
+      img: "assets/images/rezistansli_genis_paskara.jpg",
+      tr: {
+        title: "Rezistanslı Geniş Paskara",
+        desc: "Geniş çalışma alanı, homojen rezistans ısıtması ve yüksek debili vakum tahliyesi ile çarşaf, perde ve kaban gibi büyük ebatlı ürünler için tasarlanmıştır.",
+        bullets: [
+          "Geniş üst tabla yüzeyi ile büyük ebatlı tekstil ürünlerinde yüksek konfor ve hız sağlar.",
+          "Rezistans ısıtmalı üst yüzey sayesinde nemsiz ve kuru ütüleme ortamı sunar.",
+          "Güçlü vakum motoru büyük parçalarda buharın hızlı çekilmesini sağlar."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.75 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "2.5 kW" },
+          { key: "Masa Ebatları", value: "150 x 80 cm" }
+        ]
+      },
+      en: {
+        title: "Resistor Wide Ironing Table",
+        desc: "Designed for large-sized items such as sheets, curtains, and coats with its wide working area, homogeneous resistance heating, and high-flow vacuum extraction.",
+        bullets: [
+          "Wide table surface delivers high comfort and speed for large textile items.",
+          "Resistance-heated surface provides a dry and moisture-free pressing environment.",
+          "Powerful vacuum motor ensures quick steam extraction on large fabrics."
+        ],
+        specs: [
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.75 kW" },
+          { key: "Table Heating Power", value: "2.5 kW" },
+          { key: "Table Dimensions", value: "150 x 80 cm" }
+        ]
+      }
+    },
+    {
+      id: "rezistansli-genis-paskara-kollu",
+      category: "table",
+      katalogCategory: "rezistanli",
+      img: "assets/images/rezistansli_genis_paskara_kollu.jpg",
+      tr: {
+        title: "Rezistanslı Geniş Paskara (Kollu)",
+        desc: "Geniş çalışma yüzeyi, ısıtmalı kol aparatı ve güçlü vakumlu emiş sistemi ile büyük ebatlı kumaşlar ve detay gerektiren ceket ve palto kolları için idealdir.",
+        bullets: [
+          "Geniş tabla alanı ve ısıtmalı döner kol aparatı bir arada sunulmuştur.",
+          "Rezistans ısıtmalı sistem su damlamasını engeller ve kumaşı kuru tutar.",
+          "Endüstriyel kullanıma uygun yüksek vakum tahliyesi mevcuttur."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.75 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "2.5 kW" },
+          { key: "Kol Isıtıcı Gücü", value: "0.5 kW" },
+          { key: "Masa Ebatları", value: "150 x 80 cm" }
+        ]
+      },
+      en: {
+        title: "Resistor Wide Ironing Table with Sleeve Arm",
+        desc: "Ideal for large fabrics as well as coat sleeves requiring details with its wide ironing surface, heated sleeve board, and strong vacuum suction system.",
+        bullets: [
+          "Combines a wide table area with a heated rotating sleeve board attachment.",
+          "Resistance-heated system prevents water drops and keeps fabrics dry.",
+          "Equipped with high-flow vacuum extraction suitable for industrial workloads."
+        ],
+        specs: [
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.75 kW" },
+          { key: "Table Heating Power", value: "2.5 kW" },
+          { key: "Sleeve Heating Power", value: "0.5 kW" },
+          { key: "Table Dimensions", value: "150 x 80 cm" }
+        ]
+      }
+    },
+    {
+      id: "kendinden-kazanli-dar-paskara-kollu",
+      category: "table",
+      katalogCategory: "kendinden-kazanli",
+      img: "assets/images/kendinden_kazanli_dar_paskara_kollu.jpg",
+      tr: {
+        title: "Kendinden Kazanlı Dar Paskara (Kollu)",
+        desc: "Dahili buhar kazanı, güçlü vakum emişi ve ısıtmalı dar kol aparatı sayesinde ceket, gömlek ve pantolon ütülemede yüksek performans sağlar.",
+        bullets: [
+          "Dahili buhar kazanı ile harici buhar hattı gerektirmez.",
+          "Isıtmalı dar kol paskara aparatı ile kol ütülemede kusursuz sonuç verir.",
+          "Yüksek emiş gücüne sahip vakum motoru nem birikmesini önler."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
+          { key: "Kazan Isıtıcı Gücü", value: "3.0 kW" },
+          { key: "Çalışma Basıncı", value: "4 Bar" }
         ]
       },
       en: {
         title: "Self-Boiler Narrow Ironing Table with Sleeve Arm",
-        desc: "Vacuum table with built-in boiler. Specially features a heated narrow sleeve arm to iron jacket and shirt sleeves cleanly.",
+        desc: "Provides high performance for jackets, shirts, and trousers thanks to its built-in steam boiler, strong vacuum suction, and heated narrow sleeve arm.",
         bullets: [
-          "High vacuum motor ensures professional, moisture-free fabric finishing.",
-          "Integrated steam boiler operates independently without needing line systems."
+          "Equipped with built-in boiler, no external steam line required.",
+          "Heated narrow sleeve board attachment for perfect sleeve creasing.",
+          "High-suction vacuum motor prevents moisture build-up."
         ],
         specs: [
-          { key: "Power Supply", value: "220V / 380V" },
-          { key: "Vacuum Motor Power", value: "0.37 kW" },
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.55 kW" },
           { key: "Table Heating Power", value: "1.5 kW" },
-          { key: "Integrated Boiler Power", value: "3.0 kW" },
-          { key: "Sleeve Attachment", value: "Heated Sleeve Arm Board" }
+          { key: "Boiler Heating Power", value: "3.0 kW" },
+          { key: "Working Pressure", value: "4 Bar" }
         ]
       }
     },
     {
-      id: "emisli-uflemeli-paskara",
+      id: "kendinden-kazanli-dar-paskara",
       category: "table",
-      katalogCategory: "tasarruflu",
-      img: "assets/images/emisli_uflemeli_paskara.png",
+      katalogCategory: "kendinden-kazanli",
+      img: "assets/images/kendinden_kazanli_dar_paskara.jpg",
       tr: {
-        title: "Emişli Üflemesi Kendinden Kazanlı Dar Kollu Bacalı Lambalı Paskara",
-        desc: "Hassas kumaşlar için emiş ve üfleme (hava yastığı) özelliğine sahip, aydınlatmalı, bacalı ve dar kol aparatlı son teknoloji paskara.",
+        title: "Kendinden Kazanlı Dar Paskara",
+        desc: "Kompakt tasarımı, dahili buhar kazanı ve yüksek vakum performansı ile tekstil atölyeleri ve kuru temizlemeciler için ideal ütü masası.",
         bullets: [
-          "Emiş ve üfleme sistemi sayesinde profesyonel ve düzgün ütüleme sağlar.",
-          "Dahili buhar kazanı ile harici buhar sistemine ihtiyaç duymadan çalışır."
+          "Buhar kazanlı ve vakumlu kendinden sistemli tasarım.",
+          "Hızlı buhar üretimi ve kesintisiz çalışma imkanı.",
+          "Dar tabla yapısı ile pantolon ve gömlek ütülemede kolaylık sağlar."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 50Hz" },
-          { key: "Üfleme Fan Motoru", value: "0.55 kW" },
-          { key: "Vakum Motoru", value: "0.55 kW" },
-          { key: "Kazan Rezistans Gücü", value: "4.5 kW" },
-          { key: "Ekstra Özellikler", value: "Aydınlatma Armatürü & Baca Sistemi & Isıtmalı Kol Aparatı" }
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
+          { key: "Kazan Isıtıcı Gücü", value: "3.0 kW" },
+          { key: "Buhar Girişi", value: "G 1/2\"" }
         ]
       },
       en: {
-        title: "Blow and Suction Ironing Table with Sleeve Arm, Light & Chimney",
-        desc: "Advanced vacuum table with suction and blowing (air cushion) features for delicate fabrics, complete with built-in boiler, lighting, exhaust chimney, and heated sleeve board.",
+        title: "Self-Boiler Narrow Ironing Table",
+        desc: "Ideal ironing table for textile workshops and dry cleaners with its compact design, built-in steam boiler, and high vacuum performance.",
         bullets: [
-          "Blowing and suction systems create air cushion for perfect, trace-free fabric pressing.",
-          "Built-in steam boiler operates without requiring centralized line boiler feeds."
+          "Self-contained vacuum system with built-in steam boiler.",
+          "Fast steam generation and continuous operation capability.",
+          "Narrow table structure offers easy ironing of trousers and shirts."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 50Hz" },
-          { key: "Blower Fan Motor", value: "0.55 kW" },
-          { key: "Vacuum Motor", value: "0.55 kW" },
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.55 kW" },
+          { key: "Table Heating Power", value: "1.5 kW" },
+          { key: "Boiler Heating Power", value: "3.0 kW" },
+          { key: "Steam Inlet", value: "G 1/2\"" }
+        ]
+      }
+    },
+    {
+      id: "kendinden-kazanli-genis-paskara-kollu",
+      category: "table",
+      katalogCategory: "kendinden-kazanli",
+      img: "assets/images/kendinden_kazanli_genis_paskara_kollu.jpg",
+      tr: {
+        title: "Kendinden Kazanlı Geniş Paskara (Kollu)",
+        desc: "Geniş çalışma alanı, ısıtmalı dar kol aparatı ve dahili kazanıyla büyük ebatlı kumaşlar, ceketler ve kabanlar için mükemmel bir çözüm.",
+        bullets: [
+          "Geniş üst tabla yüzeyi ile geniş kumaşların kolayca ütülenmesini sağlar.",
+          "Dahili buhar kazanı ve güçlü vakum tahliyesi.",
+          "Döner mafsallı ve ısıtmalı kol paskarası mevcuttur."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.75 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "2.0 kW" },
+          { key: "Kazan Isıtıcı Gücü", value: "4.5 kW" },
+          { key: "Masa Ebatları", value: "135 x 65 cm" }
+        ]
+      },
+      en: {
+        title: "Self-Boiler Wide Ironing Table with Sleeve Arm",
+        desc: "Perfect solution for large fabrics, coats, and jackets with its wide working area, heated narrow sleeve board, and built-in boiler.",
+        bullets: [
+          "Wide top board surface makes it easy to iron large pieces of fabric.",
+          "Built-in steam boiler and high-performance vacuum extraction.",
+          "Features a rotating joint and heated sleeve arm board."
+        ],
+        specs: [
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.75 kW" },
+          { key: "Table Heating Power", value: "2.0 kW" },
           { key: "Boiler Heating Power", value: "4.5 kW" },
-          { key: "Additional Specs", value: "Built-in Light Fixture, Smoke Exhaust Chimney, Heated Sleeve Arm Board" }
+          { key: "Table Dimensions", value: "135 x 65 cm" }
+        ]
+      }
+    },
+    {
+      id: "kendinden-kazanli-genis-paskara",
+      category: "table",
+      katalogCategory: "kendinden-kazanli",
+      img: "assets/images/kendinden_kazanli_genis_paskara.jpg",
+      tr: {
+        title: "Kendinden Kazanlı Geniş Paskara",
+        desc: "Dahili buhar jeneratörü ve geniş tabla yüzeyi ile yüksek kapasiteli vakumlu endüstriyel ütü masası.",
+        bullets: [
+          "Geniş üst tabla sayesinde nevresim, çarşaf ve geniş tekstil ürünlerine uygun.",
+          "Kesintisiz buhar beslemesi ve otomatik su pompası kontrolü.",
+          "Vakumlu emiş sistemi ile nemi kumaştan hızlıca uzaklaştırır."
+        ],
+        specs: [
+          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Vakum Motoru Gücü", value: "0.75 kW" },
+          { key: "Masa Isıtıcı Gücü", value: "2.0 kW" },
+          { key: "Kazan Isıtıcı Gücü", value: "4.5 kW" },
+          { key: "Kazan Hacmi", value: "10 Litre" }
+        ]
+      },
+      en: {
+        title: "Self-Boiler Wide Ironing Table",
+        desc: "High-capacity vacuum industrial ironing table with built-in steam generator and wide board surface.",
+        bullets: [
+          "Wide board surface suitable for bed sheets, linens, and large textile items.",
+          "Continuous steam feed and automatic water pump control.",
+          "Vacuum suction system quickly draws moisture away from the fabric."
+        ],
+        specs: [
+          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Vacuum Motor Power", value: "0.75 kW" },
+          { key: "Table Heating Power", value: "2.0 kW" },
+          { key: "Boiler Heating Power", value: "4.5 kW" },
+          { key: "Boiler Volume", value: "10 Liters" }
         ]
       }
     }

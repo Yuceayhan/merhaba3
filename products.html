@@ -23,7 +23,7 @@
         </span>
         <span class="ticker-info">
           <svg class="icon ticker-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <a href="mailto:civanddurmus@gmail.com">CİVANDDURMUS@GMAİL.COM</a>
+          <a href="mailto:uzman.utu34@gmail.com">UZMAN.UTU34@GMAIL.COM</a>
         </span>
       </div>
       <div class="ticker-news">
@@ -37,6 +37,10 @@
       <div class="navbar">
         <a href="index.html" class="logo">
           <img src="assets/images/logo.png" alt="Uzman Buharlı Ütü Makinaları" class="logo-img" />
+          <span class="logo-text-container">
+            <span class="logo-title">UZM</span>
+            <span class="logo-subtitle">Uzman Buharlı Ütü</span>
+          </span>
         </a>
 
         <ul class="nav-menu" id="nav-menu">
@@ -51,20 +55,20 @@
           </li>
           <li>
             <a
-              href="index.html#about"
-              class="nav-link"
-              data-section="about"
-              data-i18n="nav-about"
-              >Hakkında</a
-            >
-          </li>
-          <li>
-            <a
               href="products.html"
               class="nav-link active"
               data-section="products"
               data-i18n="nav-products"
               >Ürünlerimiz</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#about"
+              class="nav-link"
+              data-section="about"
+              data-i18n="nav-about"
+              >Hakkında</a
             >
           </li>
           <li>
@@ -124,48 +128,13 @@
                 </button>
               </li>
               <li>
-                <button class="sidebar-menu-btn" data-filter="robotlar" data-i18n="cat-robotlar">
-                  Askıda Ütüleme Robotları
-                </button>
-              </li>
-              <li>
-                <button class="sidebar-menu-btn" data-filter="cit-cit" data-i18n="cat-cit-cit">
-                  Çıt Çıt Makinaları
-                </button>
-              </li>
-              <li>
-                <button class="sidebar-menu-btn" data-filter="el-utu-firca" data-i18n="cat-el-utu-firca">
-                  El Ütüleri Ve Buhar Fırçaları
-                </button>
-              </li>
-              <li>
-                <button class="sidebar-menu-btn" data-filter="endustriyel" data-i18n="cat-endustriyel">
-                  Endüstriyel Ürünler
-                </button>
-              </li>
-              <li>
-                <button class="sidebar-menu-btn" data-filter="kazanli-utu" data-i18n="cat-kazanli-utu">
-                  Kazanlı Tip Buharlı Ütüler
-                </button>
-              </li>
-              <li>
                 <button class="sidebar-menu-btn" data-filter="kendinden-kazanli" data-i18n="cat-kendinden-kazanli">
                   Kendinden Kazanlı Paskaralar
                 </button>
               </li>
               <li>
-                <button class="sidebar-menu-btn" data-filter="leke-makinalari" data-i18n="cat-leke-makinalari">
-                  Leke Makinaları
-                </button>
-              </li>
-              <li>
-                <button class="sidebar-menu-btn" data-filter="otomatik-kazanlar" data-i18n="cat-otomatik-kazanlar">
-                  Otomatik Buhar Kazanları
-                </button>
-              </li>
-              <li>
                 <button class="sidebar-menu-btn" data-filter="rezistanli" data-i18n="cat-rezistanli">
-                  Rezistanlı Paskaralar
+                  Rezistanslı Paskaralar
                 </button>
               </li>
               <li>
@@ -174,8 +143,28 @@
                 </button>
               </li>
               <li>
-                <button class="sidebar-menu-btn" data-filter="utu-masalari" data-i18n="cat-utu-masalari">
-                  Ütü Masaları
+                <button class="sidebar-menu-btn" data-filter="otomatik-kazanlar" data-i18n="cat-otomatik-kazanlar">
+                  Otomatik Buhar Kazanları
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-menu-btn" data-filter="leke-makinalari" data-i18n="cat-leke-makinalari">
+                  Leke Çıkarma Makinaları
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-menu-btn" data-filter="endustriyel" data-i18n="cat-endustriyel">
+                  Endüstriyel Ürünler
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-menu-btn" data-filter="utu-ve-masa" data-i18n="cat-utu-ve-masa">
+                  Ütü ve Masa
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-menu-btn" data-filter="yedek-parca" data-i18n="cat-yedek-parca">
+                  Yedek Parçalar
                 </button>
               </li>
             </ul>
@@ -190,15 +179,15 @@
 
         <!-- Sağ Taraf Ürün Listeleme Grid'i -->
         <section class="katalog-main-content">
-          <!-- Mobil Filtreleme Butonu -->
+          
           <button class="mobile-filter-btn" id="mobile-filter-btn">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+            <svg class="icon filter-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
             <span>FİLTRELE</span>
           </button>
           
           <div class="katalog-header">
             <h2 id="katalog-active-title" data-i18n="cat-all-katalog">Tüm Ürünler</h2>
-            <span class="katalog-count" id="katalog-count">28 Ürün Listeleniyor</span>
+            <span class="katalog-count" id="katalog-count">37 Ürün Listeleniyor</span>
           </div>
           
           <div class="product-grid" id="katalog-grid">
@@ -262,9 +251,13 @@
     <footer>
       <div class="footer-content">
         <div class="footer-brand">
-          <h3>
-            <img src="assets/images/logo.png" alt="Uzman Buharlı Ütü Makinaları" class="logo-img-footer" />
-          </h3>
+          <a href="index.html" class="logo" style="margin-bottom: 12px; display: inline-flex;">
+            <img src="assets/images/logo.png" alt="Uzman Buharlı Ütü Makinaları" class="logo-img-footer" style="margin-bottom: 0;" />
+            <span class="logo-text-container">
+              <span class="logo-title">UZM</span>
+              <span class="logo-subtitle">Uzman Buharlı Ütü</span>
+            </span>
+          </a>
           <p data-i18n="footer-brand-text">
             Profesyonel tekstil ve konfeksiyon ütü sistemlerinde 20 yılı aşkın güvenilir çözüm ortağınız.
           </p>
@@ -273,8 +266,8 @@
           <h4 data-i18n="footer-links-title">Hızlı Menü</h4>
           <ul class="footer-links-list">
             <li><a href="index.html" data-i18n="nav-home">Ana Sayfa</a></li>
-            <li><a href="index.html#about" data-i18n="nav-about">Hakkında</a></li>
             <li><a href="products.html" data-i18n="nav-products">Ürünlerimiz</a></li>
+            <li><a href="index.html#about" data-i18n="nav-about">Hakkında</a></li>
             <li><a href="index.html#faq" data-i18n="nav-faq">S.S.S.</a></li>
             <li><a href="index.html#contact" data-i18n="nav-contact">İletişim</a></li>
           </ul>
@@ -286,7 +279,7 @@
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Hacı Kadın, Katip Çelebi Cd. No:12 D:B, Fatih/İstanbul</span>
+            <span>Piyalepaşa Mah. Aydın Sok. No:32/A, Beyoğlu/İstanbul</span>
           </p>
           <p style="margin-top: 12px">
             <svg class="icon footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -299,7 +292,7 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            <a href="mailto:civanddurmus@gmail.com">civanddurmus@gmail.com</a>
+            <a href="mailto:uzman.utu34@gmail.com">uzman.utu34@gmail.com</a>
           </p>
         </div>
       </div>

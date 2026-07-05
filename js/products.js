@@ -58,9 +58,25 @@ function renderKatalog() {
   if (!katalogGrid) return;
   katalogGrid.innerHTML = "";
   
-  // Filtreleme mantığı
+  // Kategoriye göre sıralama düzeni
+  const categoryOrder = {
+    "kendinden-kazanli": 1,
+    "rezistanli": 2,
+    "tasarruflu": 3,
+    "otomatik-kazanlar": 4,
+    "leke-makinalari": 5,
+    "endustriyel": 6,
+    "utu-ve-masa": 7,
+    "yedek-parca": 8
+  };
+
+  // Filtreleme ve sıralama mantığı
   const filteredProducts = activeKatalogFilter === "all"
-    ? productsData
+    ? [...productsData].sort((a, b) => {
+        const orderA = categoryOrder[a.katalogCategory] || 99;
+        const orderB = categoryOrder[b.katalogCategory] || 99;
+        return orderA - orderB;
+      })
     : productsData.filter(p => p.katalogCategory === activeKatalogFilter);
 
   // Sayısal veri gösterimi
