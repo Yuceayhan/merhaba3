@@ -2095,7 +2095,7 @@ footer {
   /* Mobile Categories Drawer Overlay Layout */
   .katalog-container {
     display: block;
-    padding: 10px 16px 80px 16px;
+    padding: 10px 8px 80px 8px; /* Balanced smaller padding to give products more space */
   }
 
   .katalog-sidebar {
@@ -2185,46 +2185,41 @@ footer {
     opacity: 1;
   }
 
-  /* 1-Column Product Grid for Mobile to make them wider and look premium */
+  /* 2-Column Product Grid for Mobile - Maximized space, small gap */
   .product-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-    max-width: 480px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
   }
 
-  /* Compact Product Card on Mobile - show bullets and footer */
+  /* Compact Product Card on Mobile */
   .product-bullets-list,
-  .product-card-footer {
-    display: block !important;
-  }
-
+  .product-card-footer,
   .product-category-tag {
-    display: inline-block !important;
+    display: none !important;
   }
 
   .product-card {
-    border-radius: 20px;
+    border-radius: 16px;
   }
 
   .product-img-w {
-    height: 220px;
+    height: 180px;
   }
 
   .product-img-w img {
-    padding: 12px;
+    padding: 10px;
   }
 
   .product-info {
-    padding: 20px;
-    align-items: flex-start;
-    text-align: left;
+    padding: 12px 8px;
+    align-items: center;
+    text-align: center;
   }
 
   .product-info h3 {
-    font-size: 1.15rem;
-    margin-bottom: 8px;
-    line-height: 1.4;
+    font-size: 0.92rem;
+    margin-bottom: 0;
+    line-height: 1.35;
     color: var(--text-primary);
   }
 }
