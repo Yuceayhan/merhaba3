@@ -77,35 +77,107 @@ function resetSliderTimer() {
 }
 
 // ----------------------------------------------------
+// ----------------------------------------------------
 // 2. ÜRÜN KAROUSEL (PRODUCT CAROUSEL) AYARLARI
 // ----------------------------------------------------
+function alignCarouselToRealStart() {
+  if (!productCarousel) return;
+  const card = productCarousel.querySelector(".product-card");
+  if (!card) return;
+  const cardWidth = card.getBoundingClientRect().width;
+  const gap = 24;
+  const stepWidth = cardWidth + gap;
+  const numClones = 4;
+  
+  productCarousel.style.scrollBehavior = "auto";
+  productCarousel.scrollLeft = numClones * stepWidth;
+  productCarousel.offsetHeight; // Force reflow
+  productCarousel.style.scrollBehavior = "";
+}
+
 function initProductCarousel() {
   const prevBtn = document.getElementById("carousel-prev");
   const nextBtn = document.getElementById("carousel-next");
   if (!productCarousel || !prevBtn || !nextBtn) return;
 
+  // Next button click handler
   nextBtn.addEventListener("click", () => {
-    // Tek bir kartın genişliğini ve boşluğu hesapla
     const card = productCarousel.querySelector(".product-card");
     if (!card) return;
     const cardWidth = card.getBoundingClientRect().width;
-    const gap = 24; // style.css'teki gap değeri ile aynı
-    productCarousel.scrollBy({
-      left: cardWidth + gap,
+    const gap = 24;
+    const stepWidth = cardWidth + gap;
+    
+    const currentIndex = Math.round(productCarousel.scrollLeft / stepWidth);
+    const targetIndex = currentIndex + 1;
+    
+    productCarousel.scrollTo({
+      left: targetIndex * stepWidth,
       behavior: "smooth"
     });
   });
 
+  // Prev button click handler
   prevBtn.addEventListener("click", () => {
     const card = productCarousel.querySelector(".product-card");
     if (!card) return;
     const cardWidth = card.getBoundingClientRect().width;
     const gap = 24;
-    productCarousel.scrollBy({
-      left: -(cardWidth + gap),
+    const stepWidth = cardWidth + gap;
+    
+    const currentIndex = Math.round(productCarousel.scrollLeft / stepWidth);
+    const targetIndex = currentIndex - 1;
+    
+    productCarousel.scrollTo({
+      left: targetIndex * stepWidth,
       behavior: "smooth"
     });
   });
+
+  // Infinite scroll wrap-around event listeners
+  let scrollTimeout;
+  function handleScrollEndWrap() {
+    const card = productCarousel.querySelector(".product-card");
+    if (!card) return;
+    const cardWidth = card.getBoundingClientRect().width;
+    const gap = 24;
+    const stepWidth = cardWidth + gap;
+    
+    const scrollLeft = productCarousel.scrollLeft;
+    const totalProducts = productsData.filter(p => p.katalogCategory !== "yedek-parca").length;
+    const numClones = 4;
+    
+    const currentIndex = Math.round(scrollLeft / stepWidth);
+    
+    if (currentIndex < numClones) {
+      // Warp to the corresponding real product at the end
+      const targetIndex = currentIndex + totalProducts;
+      productCarousel.style.scrollBehavior = "auto";
+      productCarousel.scrollLeft = targetIndex * stepWidth;
+      productCarousel.offsetHeight; // Force reflow
+      productCarousel.style.scrollBehavior = "";
+    }
+    else if (currentIndex >= numClones + totalProducts) {
+      // Warp to the corresponding real product at the start
+      const targetIndex = currentIndex - totalProducts;
+      productCarousel.style.scrollBehavior = "auto";
+      productCarousel.scrollLeft = targetIndex * stepWidth;
+      productCarousel.offsetHeight; // Force reflow
+      productCarousel.style.scrollBehavior = "";
+    }
+  }
+
+  // Listen to both scroll (with timeout fallback) and scrollend (native modern support)
+  productCarousel.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(handleScrollEndWrap, 150);
+  });
+  
+  productCarousel.addEventListener("scrollend", handleScrollEndWrap);
+
+  // Resize and load event listeners to keep alignment
+  window.addEventListener("resize", alignCarouselToRealStart);
+  window.addEventListener("load", alignCarouselToRealStart);
 }
 
 // ----------------------------------------------------
@@ -148,10 +220,33 @@ function renderProducts() {
   if (!productCarousel) return;
   productCarousel.innerHTML = "";
   
-  // Öne çıkarılan ürünler olarak ilk 12 ürünü anasayfada gösterelim
-  const featuredProducts = productsData.slice(0, 12);
+  // 1. Yedek parçalar hariç diğer tüm ürünleri listele
+  let featuredProducts = productsData.filter(p => p.katalogCategory !== "yedek-parca");
 
-  featuredProducts.forEach((product) => {
+  // 2. Kategori önceliğine göre sırala
+  const categoryOrder = {
+    "kendinden-kazanli": 1,
+    "rezistanli": 2,
+    "tasarruflu": 3,
+    "otomatik-kazanlar": 4,
+    "leke-makinalari": 5,
+    "endustriyel": 6,
+    "utu-ve-masa": 7
+  };
+
+  featuredProducts.sort((a, b) => {
+    const orderA = categoryOrder[a.katalogCategory] || 99;
+    const orderB = categoryOrder[b.katalogCategory] || 99;
+    return orderA - orderB;
+  });
+
+  // 3. Sonsuz döngü için klonları oluştur (başta son 4 ürün, sonda ilk 4 ürün)
+  const numClones = 4;
+  const prependedClones = featuredProducts.slice(-numClones);
+  const appendedClones = featuredProducts.slice(0, numClones);
+  const displayProducts = [...prependedClones, ...featuredProducts, ...appendedClones];
+
+  displayProducts.forEach((product) => {
     const title = product[currentLang].title;
     const learnMoreText = translations[currentLang]["learn-more"];
     
@@ -194,6 +289,9 @@ function renderProducts() {
     card.addEventListener("click", () => openProductModal(product));
     productCarousel.appendChild(card);
   });
+
+  // 4. Konumu başlangıç konumuna ayarla
+  setTimeout(alignCarouselToRealStart, 50);
 }
 
 // SSS Accordion Oluştur
@@ -368,11 +466,137 @@ productModal.addEventListener("click", (e) => {
   if (e.target === productModal) closeProductModal();
 });
 
+// İletişim Konusu Seçim Modalı Yönetimi
+const subjectModal = document.getElementById("subject-modal");
+const subjectModalCloseBtn = document.getElementById("subject-modal-close");
+const subjectTrigger = document.getElementById("form-subject-trigger");
+const subjectInput = document.getElementById("form-subject");
+const subjectSelectedText = document.getElementById("form-subject-selected-text");
+
+function openSubjectModal() {
+  if (!subjectModal) return;
+  subjectModal.style.display = "flex";
+  setTimeout(() => {
+    subjectModal.classList.add("show");
+  }, 10);
+  document.body.style.overflow = "hidden";
+}
+
+function closeSubjectModal() {
+  if (!subjectModal) return;
+  subjectModal.classList.remove("show");
+  setTimeout(() => {
+    subjectModal.style.display = "none";
+  }, 300);
+  document.body.style.overflow = "";
+}
+
+// Konu seçenek kartlarına tıklama atama
+document.querySelectorAll(".subject-option-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const val = card.getAttribute("data-val");
+    const key = card.getAttribute("data-key");
+    
+    // Değerleri kaydet
+    subjectInput.value = val;
+    subjectSelectedText.textContent = translations[currentLang][key];
+    subjectSelectedText.setAttribute("data-i18n", key);
+    
+    // Sınıfları temizle ve ekle
+    document.querySelectorAll(".subject-option-card").forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
+    
+    closeSubjectModal();
+  });
+});
+
+if (subjectTrigger) {
+  subjectTrigger.addEventListener("click", openSubjectModal);
+}
+if (subjectModalCloseBtn) {
+  subjectModalCloseBtn.addEventListener("click", closeSubjectModal);
+}
+if (subjectModal) {
+  subjectModal.addEventListener("click", (e) => {
+    if (e.target === subjectModal) closeSubjectModal();
+  });
+}
+
 if (contactForm) {
+  const phoneInput = document.getElementById("form-phone");
+  if (phoneInput) {
+    phoneInput.addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    });
+  }
+
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    showToast(translations[currentLang]["form-success"], "success");
-    contactForm.reset();
+    
+    const name = document.getElementById("form-name").value;
+    const email = document.getElementById("form-email").value;
+    const phone = document.getElementById("form-phone").value;
+    const subject = document.getElementById("form-subject").value;
+    const message = document.getElementById("form-message").value;
+
+    if (phone.length !== 11) {
+      const errorMsg = currentLang === "tr" ? "Telefon numarası 11 haneli olmalıdır (Örn: 05465378221)!" : "Phone number must be exactly 11 digits!";
+      showToast(errorMsg, "error");
+      return;
+    }
+
+    if (!subject) {
+      const errorMsg = currentLang === "tr" ? "Lütfen bir iletişim konusu seçiniz!" : "Please select a subject!";
+      showToast(errorMsg, "error");
+      return;
+    }
+
+    // Gönderiliyor durumu
+    const submitBtn = contactForm.querySelector("button[type='submit']");
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = currentLang === "tr" ? "Gönderiliyor..." : "Sending...";
+
+    fetch("https://formsubmit.co/ajax/uzman.utu34@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        "Ad Soyad": name,
+        "E-posta": email,
+        "Telefon": phone,
+        "Konu": subject,
+        "Mesaj": message
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("HTTP error " + response.status);
+      }
+    })
+    .then(data => {
+      showToast(translations[currentLang]["form-success"], "success");
+      contactForm.reset();
+      
+      // Konu seçimini de sıfırla
+      subjectInput.value = "";
+      subjectSelectedText.textContent = translations[currentLang]["form-subject-placeholder"];
+      subjectSelectedText.setAttribute("data-i18n", "form-subject-placeholder");
+      document.querySelectorAll(".subject-option-card").forEach(c => c.classList.remove("active"));
+    })
+    .catch(err => {
+      console.error(err);
+      const errorMsg = currentLang === "tr" ? "Bir hata oluştu. Lütfen tekrar deneyin." : "An error occurred. Please try again.";
+      showToast(errorMsg, "error");
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    });
   });
 }
 

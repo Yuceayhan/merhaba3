@@ -2031,7 +2031,8 @@ footer {
   .hero-image-caption {
     font-size: 0.78rem;
     padding: 6px 14px;
-    bottom: 12px;
+    bottom: auto;
+    top: 12px;
   }
 
   .products-carousel-section {
@@ -2236,4 +2237,83 @@ footer {
   .hero-image-container {
     height: 200px;
   }
+}
+
+/* Custom Subject Select and Option Modal */
+.custom-select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.custom-select-trigger:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.select-arrow-icon {
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+}
+
+.custom-select-trigger:hover .select-arrow-icon {
+  color: var(--primary-color);
+}
+
+.subject-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.subject-option-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.subject-option-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(59, 130, 246, 0.05) 100%);
+  box-shadow: var(--card-shadow);
+}
+
+.subject-option-card.active {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.subject-icon {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+.subject-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
