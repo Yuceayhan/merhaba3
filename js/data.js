@@ -1198,7 +1198,7 @@
           "Yüksek debili emiş motoru kumaşı hızlıca kurutur."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.55 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.8 kW" },
           { key: "Kol Isıtıcı Gücü", value: "0.4 kW" },
@@ -1214,7 +1214,7 @@
           "High-flow suction motor dries the fabric quickly."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.55 kW" },
           { key: "Table Heating Power", value: "1.8 kW" },
           { key: "Sleeve Heating Power", value: "0.4 kW" },
@@ -1236,7 +1236,7 @@
           "Çift vakum kanallı güçlü emiş sistemi nem kalıntısı bırakmaz."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.55 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.8 kW" },
           { key: "Masa Ebatları", value: "150 x 80 cm" }
@@ -1251,7 +1251,7 @@
           "Double vacuum channel suction system leaves no moisture residue."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.55 kW" },
           { key: "Table Heating Power", value: "1.8 kW" },
           { key: "Table Dimensions", value: "150 x 80 cm" }
@@ -1534,7 +1534,7 @@
           "Döner mafsallı ve ısıtmalı kol paskarası mevcuttur."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.75 kW" },
           { key: "Masa Isıtıcı Gücü", value: "2.0 kW" },
           { key: "Kazan Isıtıcı Gücü", value: "4.5 kW" },
