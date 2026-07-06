@@ -430,7 +430,7 @@
           "Dayanıklı paslanmaz kontak yapısı ile uzun ömürlü kullanım."
         ],
         specs: [
-          { key: "Sıcaklık Aralığı", value: "30°C - 120°C" },
+          { key: "Sıcaklık Aralığı", value: "50°C - 300°C" },
           { key: "Kılcal Boyu", value: "1000 mm" },
           { key: "Akım Kapasitesi", value: "16A / 250V" },
           { key: "Sensör Malzemesi", value: "Bakır Kılcal Boru" }
@@ -445,7 +445,7 @@
           "Durable stainless contact layout guarantees long working life."
         ],
         specs: [
-          { key: "Temperature Range", value: "30°C - 120°C" },
+          { key: "Temperature Range", value: "50°C - 300°C" },
           { key: "Capillary Length", value: "1000 mm" },
           { key: "Current Capacity", value: "16A / 250V" },
           { key: "Sensor Material", value: "Copper Capillary Tube" }
@@ -1162,8 +1162,8 @@
           "Dar yapısı ile gömlek, pantolon ve paça ütülemede yüksek ergonomi sağlar."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "230V" },
-          { key: "Vakum Motoru Gücü", value: "0.25 kW" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
+          { key: "Vakum Motoru Gücü", value: "0.37 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.0 kW" },
           { key: "Masa Ebatları", value: "135 x 40 cm" }
         ]
@@ -1177,8 +1177,8 @@
           "Narrow structure offers high ergonomics for ironing shirts and pants cuffs."
         ],
         specs: [
-          { key: "Power Supply", value: "230V" },
-          { key: "Vacuum Motor Power", value: "0.25 kW" },
+          { key: "Power Supply", value: "380V / 230v" },
+          { key: "Vacuum Motor Power", value: "0.37 kW" },
           { key: "Table Heating Power", value: "1.0 kW" },
           { key: "Table Dimensions", value: "135 x 40 cm" }
         ]
@@ -1272,8 +1272,8 @@
           "Vakumlu emiş gücü nem birikmesini engeller ve ütüleme kalitesini artırır."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "230V" },
-          { key: "Vakum Motoru Gücü", value: "0.25 kW" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
+          { key: "Vakum Motoru Gücü", value: "0.37 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.0 kW" },
           { key: "Kol Isıtıcı Gücü", value: "0.4 kW" },
           { key: "Masa Ebatları", value: "135 x 40 cm" }
@@ -1288,8 +1288,8 @@
           "Vacuum suction prevents moisture build-up and enhances ironing quality."
         ],
         specs: [
-          { key: "Power Supply", value: "230V" },
-          { key: "Vacuum Motor Power", value: "0.25 kW" },
+          { key: "Power Supply", value: "380V / 230v" },
+          { key: "Vacuum Motor Power", value: "0.37 kW" },
           { key: "Table Heating Power", value: "1.0 kW" },
           { key: "Sleeve Heating Power", value: "0.4 kW" },
           { key: "Table Dimensions", value: "135 x 40 cm" }
@@ -1310,8 +1310,8 @@
           "Güçlü vakum motoru nemi kumaştan hızlıca uzaklaştırır."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "230V" },
-          { key: "Vakum Motoru Gücü", value: "0.37 kW" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
           { key: "Kol Isıtıcı Gücü", value: "0.5 kW" },
           { key: "Masa Ebatları", value: "135 x 40 cm" }
@@ -1326,8 +1326,8 @@
           "High-suction vacuum motor quickly removes moisture from the fabric."
         ],
         specs: [
-          { key: "Power Supply", value: "230V" },
-          { key: "Vacuum Motor Power", value: "0.37 kW" },
+          { key: "Power Supply", value: "380V / 230v" },
+          { key: "Vacuum Motor Power", value: "0.55 kW" },
           { key: "Table Heating Power", value: "1.5 kW" },
           { key: "Sleeve Heating Power", value: "0.5 kW" },
           { key: "Table Dimensions", value: "135 x 40 cm" }
@@ -1348,8 +1348,8 @@
           "Kompakt ve dar yapısı sayesinde küçük atölyelerde yer tasarrufu sağlar."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "230V" },
-          { key: "Vakum Motoru Gücü", value: "0.37 kW" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
+          { key: "Vakum Motoru Gücü", value: "0.55 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
           { key: "Masa Ebatları", value: "135 x 40 cm" }
         ]
@@ -1363,8 +1363,8 @@
           "Compact and narrow structure saves space in small workshops."
         ],
         specs: [
-          { key: "Power Supply", value: "230V" },
-          { key: "Vacuum Motor Power", value: "0.37 kW" },
+          { key: "Power Supply", value: "380V / 230v" },
+          { key: "Vacuum Motor Power", value: "0.55 kW" },
           { key: "Table Heating Power", value: "1.5 kW" },
           { key: "Table Dimensions", value: "135 x 40 cm" }
         ]
@@ -1384,7 +1384,7 @@
           "Güçlü vakum motoru büyük parçalarda buharın hızlı çekilmesini sağlar."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.75 kW" },
           { key: "Masa Isıtıcı Gücü", value: "2.5 kW" },
           { key: "Masa Ebatları", value: "150 x 80 cm" }
@@ -1399,7 +1399,7 @@
           "Powerful vacuum motor ensures quick steam extraction on large fabrics."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.75 kW" },
           { key: "Table Heating Power", value: "2.5 kW" },
           { key: "Table Dimensions", value: "150 x 80 cm" }
@@ -1420,7 +1420,7 @@
           "Endüstriyel kullanıma uygun yüksek vakum tahliyesi mevcuttur."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.75 kW" },
           { key: "Masa Isıtıcı Gücü", value: "2.5 kW" },
           { key: "Kol Isıtıcı Gücü", value: "0.5 kW" },
@@ -1436,7 +1436,7 @@
           "Equipped with high-flow vacuum extraction suitable for industrial workloads."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.75 kW" },
           { key: "Table Heating Power", value: "2.5 kW" },
           { key: "Sleeve Heating Power", value: "0.5 kW" },
@@ -1458,7 +1458,7 @@
           "Yüksek emiş gücüne sahip vakum motoru nem birikmesini önler."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.55 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
           { key: "Kazan Isıtıcı Gücü", value: "3.0 kW" },
@@ -1474,7 +1474,7 @@
           "High-suction vacuum motor prevents moisture build-up."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.55 kW" },
           { key: "Table Heating Power", value: "1.5 kW" },
           { key: "Boiler Heating Power", value: "3.0 kW" },
@@ -1496,7 +1496,7 @@
           "Dar tabla yapısı ile pantolon ve gömlek ütülemede kolaylık sağlar."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.55 kW" },
           { key: "Masa Isıtıcı Gücü", value: "1.5 kW" },
           { key: "Kazan Isıtıcı Gücü", value: "3.0 kW" },
@@ -1512,7 +1512,7 @@
           "Narrow table structure offers easy ironing of trousers and shirts."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.55 kW" },
           { key: "Table Heating Power", value: "1.5 kW" },
           { key: "Boiler Heating Power", value: "3.0 kW" },
@@ -1550,7 +1550,7 @@
           "Features a rotating joint and heated sleeve arm board."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.75 kW" },
           { key: "Table Heating Power", value: "2.0 kW" },
           { key: "Boiler Heating Power", value: "4.5 kW" },
@@ -1572,7 +1572,7 @@
           "Vakumlu emiş sistemi ile nemi kumaştan hızlıca uzaklaştırır."
         ],
         specs: [
-          { key: "Güç Kaynağı", value: "380V / 230Hz" },
+          { key: "Güç Kaynağı", value: "380V / 230v" },
           { key: "Vakum Motoru Gücü", value: "0.75 kW" },
           { key: "Masa Isıtıcı Gücü", value: "2.0 kW" },
           { key: "Kazan Isıtıcı Gücü", value: "4.5 kW" },
@@ -1588,7 +1588,7 @@
           "Vacuum suction system quickly draws moisture away from the fabric."
         ],
         specs: [
-          { key: "Power Supply", value: "380V / 230Hz" },
+          { key: "Power Supply", value: "380V / 230v" },
           { key: "Vacuum Motor Power", value: "0.75 kW" },
           { key: "Table Heating Power", value: "2.0 kW" },
           { key: "Boiler Heating Power", value: "4.5 kW" },
