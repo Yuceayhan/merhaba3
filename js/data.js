@@ -87,6 +87,13 @@
       "subject-title-3": "Yedek Parça Talebi",
       "subject-title-4": "Bayilik & İş Birliği",
       "subject-title-5": "Diğer",
+      "val-name-empty": "Lütfen adınızı ve soyadınızı giriniz!",
+      "val-email-empty": "Lütfen e-posta adresinizi giriniz!",
+      "val-email-invalid": "Lütfen geçerli bir e-posta adresi giriniz!",
+      "val-phone-empty": "Lütfen telefon numaranızı giriniz!",
+      "val-phone-invalid": "Telefon numarası 11 haneli olmalıdır (Örn: 05465378221)!",
+      "val-subject-empty": "Lütfen bir iletişim konusu seçiniz!",
+      "val-message-empty": "Lütfen mesajınızı giriniz!",
       
       // Detay Modalı Özellikleri
       "modal-specs-title": "Teknik Özellikler",
@@ -195,6 +202,13 @@
       "subject-title-3": "Spare Parts Inquiry",
       "subject-title-4": "Dealership & Partnership",
       "subject-title-5": "Other",
+      "val-name-empty": "Please enter your name and surname!",
+      "val-email-empty": "Please enter your email address!",
+      "val-email-invalid": "Please enter a valid email address!",
+      "val-phone-empty": "Please enter your phone number!",
+      "val-phone-invalid": "Phone number must be exactly 11 digits (e.g. 05465378221)!",
+      "val-subject-empty": "Please select a contact subject!",
+      "val-message-empty": "Please enter your message!",
       
       // Details Modal Specifications
       "modal-specs-title": "Technical Specifications",

@@ -539,15 +539,42 @@ if (contactForm) {
     const subject = document.getElementById("form-subject").value;
     const message = document.getElementById("form-message").value;
 
-    if (phone.length !== 11) {
-      const errorMsg = currentLang === "tr" ? "Telefon numarası 11 haneli olmalıdır (Örn: 05465378221)!" : "Phone number must be exactly 11 digits!";
-      showToast(errorMsg, "error");
+    // Ad Soyad Kontrolü
+    if (!name.trim()) {
+      showToast(translations[currentLang]["val-name-empty"], "error");
       return;
     }
 
+    // E-posta Kontrolü
+    if (!email.trim()) {
+      showToast(translations[currentLang]["val-email-empty"], "error");
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      showToast(translations[currentLang]["val-email-invalid"], "error");
+      return;
+    }
+
+    // Telefon Kontrolü
+    if (!phone) {
+      showToast(translations[currentLang]["val-phone-empty"], "error");
+      return;
+    }
+    if (phone.length !== 11) {
+      showToast(translations[currentLang]["val-phone-invalid"], "error");
+      return;
+    }
+
+    // Konu Kontrolü
     if (!subject) {
-      const errorMsg = currentLang === "tr" ? "Lütfen bir iletişim konusu seçiniz!" : "Please select a subject!";
-      showToast(errorMsg, "error");
+      showToast(translations[currentLang]["val-subject-empty"], "error");
+      return;
+    }
+
+    // Mesaj Kontrolü
+    if (!message.trim()) {
+      showToast(translations[currentLang]["val-message-empty"], "error");
       return;
     }
 
