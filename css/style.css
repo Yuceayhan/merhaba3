@@ -396,7 +396,8 @@ section {
   z-index: 2;
 }
 
-.hero-content h1 {
+.hero-content h1,
+.hero-content h2 {
   font-size: 3.8rem;
   font-weight: 800;
   line-height: 1.15;
@@ -1459,7 +1460,8 @@ footer {
     gap: 40px;
   }
   
-  .hero-content h1 {
+  .hero-content h1,
+  .hero-content h2 {
     font-size: 3.2rem;
   }
   
@@ -1580,7 +1582,8 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .hero-content h1 {
+  .hero-content h1,
+  .hero-content h2 {
     font-size: 2.4rem;
   }
   
@@ -1938,6 +1941,7 @@ footer {
   padding-bottom: 16px;
 }
 
+.katalog-header h1,
 .katalog-header h2 {
   font-size: 2rem;
   font-weight: 800;
@@ -2316,4 +2320,16 @@ footer {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
+}
+
+/* Visually Hidden for SEO accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
