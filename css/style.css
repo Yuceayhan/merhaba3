@@ -1015,6 +1015,59 @@ section {
 
 .contact-map-container iframe {
   display: block;
+  pointer-events: none;
+}
+
+/* Map Overlay Link & Badge Styles */
+.map-overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.map-overlay-link:hover {
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.map-overlay-badge {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(10px);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.contact-map-container:hover .map-overlay-badge {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .map-overlay-link {
+    background: rgba(15, 23, 42, 0.15);
+  }
+  .map-overlay-badge {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
 }
 
 .contact-form-container {
